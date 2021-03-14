@@ -61,9 +61,12 @@ const StudentBoardCourses = () => {
                 <>
                 {studentCourses.course.map((item, index) => (
                 <div>
-                    {item.status === 2 && (item.courseId !== undefined || item.courseId !== null)? (
+                    {item.courseId === null || item.courseId === undefined ? (
+                        <div></div>
+                    ) : 
+                    item.status === 2 && (item.courseId !== undefined || item.courseId !== null)? (
                     <div className='student-course-detail' key={index}>
-                        <img src={item.courseId.image ? item.courseId.image : defaultImg} alt='courses'/>
+                        <img src={item.courseId.image === null ? defaultImg : item.courseId.image} alt='courses'/>
                         <div className='course-detail-first'>
                             <p><b>{item.courseId.title}</b></p>
                             <p className='title'>By {item.courseId.teacherId.fullname}</p>
@@ -79,7 +82,7 @@ const StudentBoardCourses = () => {
                     </div> 
                     ) : item.status === 1 && (item.courseId !== undefined || item.courseId !== null)? (
                     <div className='student-course-detail' key={index}>
-                        <img src={item.courseId.image ? item.courseId.image : defaultImg} alt='courses'/>
+                        <img src={item.courseId.image === null ? defaultImg : item.courseId.image} alt='courses'/>
                         <div className='course-detail-first'>
                             <p><b>{item.courseId.title}</b></p>
                             <p className='title'>By {item.courseId.teacherId.fullname}</p>
@@ -93,11 +96,9 @@ const StudentBoardCourses = () => {
                             <p><button onClick={() => handlePopUpContent(item.courseId._id)}>Lesson {item.totalSeenCourses === 0 ? '' : `#${item.totalSeenCourses}`}</button></p>
                         </div>
                     </div> 
-                    ) : item.courseId === undefined || item.courseId === null ? (
-                        <div></div>
                     ) : (
                         <div className='student-course-detail' key={index}>
-                        <img src={item.courseId.image ? item.courseId.image : defaultImg} alt='courses'/>
+                        <img src={item.courseId.image === null ? defaultImg : item.courseId.image} alt='courses'/>
                         <div className='course-detail-first'>
                             <p><b>{item.courseId.title}</b></p>
                             <p className='title'>By {item.courseId.teacherId.fullname}</p>
