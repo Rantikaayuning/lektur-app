@@ -45,7 +45,7 @@ export default function CreateContent() {
         setAdd2(false)
     }
 
-    console.log(videoKey);
+    // console.log(videoKey);
     return (
         <div className='add-new-lesson-box'>
             <div className='add-new-lesson-input'>

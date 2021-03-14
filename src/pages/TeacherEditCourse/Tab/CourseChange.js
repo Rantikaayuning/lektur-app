@@ -21,7 +21,7 @@ const TeacherCourseUpdate = () => {
   const [title, setTitle] = useState(`${detailTitle}`);
   const [overview, setOverview] = useState(`${detailOverview}`);
   const [imageData, setImageData] = useState("");
-  const [buttonImage, setButtonImage] = useState("Add header image");
+  // const [buttonImage, setButtonImage] = useState("Add header image");
   const [contentList, setContentList] = useState([]);
   const [isAdd3, setAdd3] = useState(false);
   const [isAdd2, setAdd2] = useState(false);
@@ -58,8 +58,8 @@ const TeacherCourseUpdate = () => {
     setAdd2(false)
   }
 
-  console.log(courseDetail, 'loading', isLoading)
-  console.log(image);
+  // console.log(courseDetail, 'loading', isLoading)
+  // console.log(image);
 
   return (
     <>
@@ -173,7 +173,7 @@ const TeacherCourseUpdate = () => {
                     <button onClick={submitUpdate}>Save</button>
                   ) : (
                     <>
-                      {update != true ? (
+                      {update !== true ? (
                         <div id="small-loader-navbar"></div>
                       ) : (
                         <button>Saved</button>

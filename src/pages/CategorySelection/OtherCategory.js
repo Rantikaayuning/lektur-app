@@ -15,7 +15,7 @@ function OtherCategory() {
     dispatch(getCourses());
   }, [dispatch]);
 
-  console.log(courses);
+  // console.log(courses);
   // console.log(courses.filter((item) => item.categoryId.categories.length > 11));
 
   return (

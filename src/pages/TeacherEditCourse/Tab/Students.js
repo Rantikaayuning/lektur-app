@@ -113,8 +113,8 @@ const TeacherStudentsUpdate = () => {
 
     setSearch(true);
   }
-  console.log(studentsList);
-  console.log(isFilter);
+  // console.log(studentsList);
+  // console.log(isFilter);
 
   return (
     <>

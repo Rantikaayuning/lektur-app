@@ -104,7 +104,7 @@ export const updateUserProfile = (fullname, email) => async (dispatch) => {
     }
   )
     .then((response) => {
-      console.log("updateUserProfile=>", response);
+      // console.log("updateUserProfile=>", response);
       Cookies.set("token", response.data.token);
       let decoded;
       if (response.data && response.data.token !== {}) { // or use !_.isEmpty(response.data.token)

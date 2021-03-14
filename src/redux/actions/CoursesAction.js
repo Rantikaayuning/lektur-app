@@ -35,9 +35,6 @@ export const fetchLoading = (payload) => {
   };
 };
 
-// let isLoading = true;
-//   dispatch(fetchLoading(isLoading));
-
 export const getCourses = (payload) => (dispatch) => {
   axios.get(`${API}/courses/all`, payload)
     .then((response) => {
@@ -258,7 +255,7 @@ export const updateCourse = (id, title, overview) => (dispatch) => {
     }
   )
     .then((response) => {
-      console.log(response.data.code);
+      // console.log(response.data.code);
       dispatch({
         type: UPDATE_COURSE,
         payload: response.data.success,
@@ -304,7 +301,7 @@ export const getCourseFilled = (id) => (dispatch) => {
   })
     .then((response) => {
       if (response.status === 200) {
-        console.log(response.data.result.course);
+        // console.log(response.data.result.course);
         dispatch({
           type: GET_COURSE_FILLED,
           payload: response.data.result.course,
@@ -332,7 +329,7 @@ export const postContent = (id, title, description, number) => (dispatch) => {
     }
   ).then((response) => {
     if (response.status === 200) {
-      console.log(response.data.result);
+      // console.log(response.data.result);
       dispatch({
         type: CREATE_CONTENT,
         payload: response.data.result,
@@ -374,7 +371,7 @@ export const uploadVideo = (idContent, video) => (dispatch) => {
   axios.put(`${API}/content/upload/video?contentId=${idContent}`, video, config).then(
     (response) => {
       if (response.status === 201) {
-        console.log(response.data.result.videoUrl);
+        // console.log(response.data.result.videoUrl);
         dispatch({
           type: UPLOAD_VIDEO,
           payload: response.data.result,
@@ -395,7 +392,7 @@ export const uploadImage = (id, file) => (dispatch) => {
   axios.put(`${API}/courses/header/upload?courseId=${id}`, file, config).then(
     (response) => {
       if (response.status === 201) {
-        console.log(response.data.result.success);
+        // console.log(response.data.result.success);
         dispatch({
           type: UPLOAD_IMAGE,
           payload: response.data.success,
@@ -454,7 +451,7 @@ export const getCategory = () => (dispatch) => {
   })
     .then((response) => {
       if (response.status === 200) {
-        console.log(response.data.result);
+        // console.log(response.data.result);
         dispatch({
           type: GET_CATEGORY,
           payload: response.data.result,
@@ -474,7 +471,7 @@ export const getCategoryById = (id) => (dispatch) => {
     }
   )
     .then((response) => {
-      console.log(response.data.course);
+      // console.log(response.data.course);
       dispatch({
         type: GET_CATEGORY_BY_ID,
         payload: response.data.course,

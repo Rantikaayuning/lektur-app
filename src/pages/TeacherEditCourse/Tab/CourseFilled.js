@@ -17,7 +17,7 @@ function CourseFilledEdit(props) {
     courseFilled,
     contentFilled,
     materialFilled,
-    courseDetail,
+    // courseDetail,
     background,
     // idContent,
     isLoading
@@ -41,7 +41,7 @@ function CourseFilledEdit(props) {
       // .then(() => window.location.reload(false));
   };
 
-  console.log(courseDetail, 'loading', isLoading);
+  // console.log(courseDetail, 'loading', isLoading);
   return (
     <>
       {courseFilled === null || isLoading ? (

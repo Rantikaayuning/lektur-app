@@ -87,8 +87,8 @@ const StudentBoardAssessment = () => {
         setDownload(true)
     }
 
-    console.log(studentCourses)
-    console.log('certificate', certificateData)
+    // console.log(studentCourses)
+    // console.log('certificate', certificateData)
     return (
         <>
         {studentCourses.course === null || studentCourses.course === undefined ? (

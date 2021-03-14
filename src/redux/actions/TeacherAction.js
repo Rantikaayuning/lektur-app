@@ -27,9 +27,6 @@ export const fetchAcceptLoading = (payload) => {
   };
 };
 
-// let isLoading = true;
-//   dispatch(fetchLoading(isLoading));
-
 export const getTeacherCourses = (access_token = null) => (dispatch) => {
   let isLoading = true;
   dispatch(fetchLoading(isLoading));
@@ -91,7 +88,7 @@ export const postStudentInvite = (courseId, body) => dispatch => {
     },
   })
     .then(response => {
-      console.log(response);
+      // console.log(response);
       dispatch({
         type: POST_STUDENT_INVITE,
         payload: response.data.message,
@@ -113,7 +110,7 @@ export const putStudentApprove = (courseId, studentId) => dispatch => {
     },
   })
     .then(response => {
-      console.log(response);
+      // console.log(response);
       dispatch({
         type: PUT_STUDENT_APPROVE,
         payload: response.data,

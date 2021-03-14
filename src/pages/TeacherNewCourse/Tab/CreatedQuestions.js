@@ -28,7 +28,7 @@ function CreatedQuestions() {
     // setPicked({ ...isPicked });
   }
 
-  console.log("allQuestions: ", allQuestions);
+  // console.log("allQuestions: ", allQuestions);
 
   return (
     <div className="teacher-assessment">

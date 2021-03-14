@@ -43,7 +43,7 @@ function CreateAssessment() {
       options: options,
     };
     dispatch(postAssessment(body, id));
-    console.log(body);
+    // console.log(body);
   };
 
   // console.log(JSON.stringify(options, null, 2));

@@ -52,7 +52,7 @@ export const postAssessment = (body, id) => async (dispatch) => {
   })
     .then((response) => {
       if (response.status === 201) {
-        console.log(body);
+        // console.log(body);
         dispatch({
           type: POST_QUESTIONS,
           payload: response.data.result,
@@ -98,7 +98,7 @@ export const putFinalScore = (score, id) => (dispatch) => {
     }
   )
     .then((response) => {
-      console.log("score", score);
+      // console.log("score", score);
       dispatch({
         type: PUT_FINAL_SCORE,
         payload: response.data.result,
@@ -126,8 +126,8 @@ export const updateQuestion = (body, id, questionId) => async (dispatch) => {
   )
     .then((response) => {
       if (response.status === 200) {
-        console.log(body);
-        console.log(response.data);
+        // console.log(body);
+        // console.log(response.data);
         dispatch({
           type: UPDATE_QUESTION,
           payload: response.data,
@@ -138,24 +138,3 @@ export const updateQuestion = (body, id, questionId) => async (dispatch) => {
     .catch((payload) => alert(payload.response.data.message));
 };
 
-// export const getOneQuestion = (questionId) => (dispatch) => {
-//   API.get(`/assessment/question?questionId=${questionId}`, {
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//     },
-//   })
-//     .then((response) => {
-//       if (response.status === 200) {
-//         dispatch({
-//           type: GET_ONE_QUESTION,
-//           payload: response.data.result,
-//           questionText: response.data.result.question,
-//           questionNumber: response.data.result.number,
-//           questionRemarks: response.data.result.remarks,
-//           questionOptions: response.data.result.options,
-//         });
-//       }
-//       // alert(`question with questionId ${questionId} got dispatched`);
-//     })
-//     .catch((payload) => alert(payload.response.data.message));
-// };

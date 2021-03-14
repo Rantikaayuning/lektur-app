@@ -14,14 +14,14 @@ function CategorySelection() {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  const { categoryById, categories } = useSelector((state) => state.courses);
+  const { categoryById } = useSelector((state) => state.courses);
 
   useEffect(() => {
     dispatch(getCategoryById(id));
     dispatch(getCategory());
-  }, [dispatch]);
+  }, [dispatch, id]);
 
-  console.log(categories);
+  // console.log(categories);
 
   return (
     <div>

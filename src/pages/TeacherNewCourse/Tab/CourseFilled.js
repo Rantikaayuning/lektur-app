@@ -17,7 +17,7 @@ function CourseFilled(props) {
     courseFilled,
     contentFilled,
     materialFilled,
-    courseDetail,
+    // courseDetail,
     background,
   } = useSelector((state) => state.courses);
 
@@ -36,10 +36,10 @@ function CourseFilled(props) {
     dispatch(deleteCourse(id))
       .then(() => dispatch(getTeacherCourses))
       .then(() => history.push("/teacher-dashboard"))
-      .then(() => window.location.reload(false));
+      // .then(() => window.location.reload(false));
   };
 
-  console.log(courseDetail);
+  // console.log(courseDetail);
   return (
     <>
       {courseFilled === null ? (
