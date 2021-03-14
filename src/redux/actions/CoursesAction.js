@@ -40,12 +40,12 @@ export const fetchLoading = (payload) => {
 export const getCourses = (payload) => (dispatch) => {
   API.get("/courses/all", payload)
     .then((response) => {
-      if (response.status === 200) {
+      // if (response.status === 200) {
         dispatch({
           type: GET_ALL_COURSES,
           payload: response.data.result.result,
         });
-      }
+      // }
     })
     .catch(() => {
       console.log("error");
@@ -446,7 +446,7 @@ export const getCertificate = (id) => (dispatch) => {
 };
 
 export const getCategory = () => (dispatch) => {
-  API.get("/courses/categories", {
+  API.get("https://lekturapp.herokuapp.com/courses/categories", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
