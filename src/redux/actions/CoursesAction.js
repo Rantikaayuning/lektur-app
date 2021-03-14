@@ -39,7 +39,7 @@ export const fetchLoading = (payload) => {
 //   dispatch(fetchLoading(isLoading));
 
 export const getCourses = (payload) => (dispatch) => {
-  axios.get("https://lekturapp.herokuapp.com/api/courses/all", payload)
+  axios.get(`${API}/courses/all`, payload)
     .then((response) => {
       if (response.status === 200) {
         dispatch({
@@ -121,7 +121,7 @@ export const getStudentCourses = (payload) => (dispatch) => {
 };
 
 export const getStudentEnroll = (id) => (dispatch) => {
-  axios.get(`teacher/courses/student?${id}`, {
+  axios.get(`${API}/teacher/courses/student?${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -275,7 +275,7 @@ export const postCourse = (title, overview, file, categoryId) => (dispatch) => {
   const data = new FormData();
   Object.keys(form).forEach((key) => data.append(key, form[key]));
 
-  axios.post("/courses/create", data, {
+  axios.post(`${API}/courses/create`, data, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -447,7 +447,7 @@ export const getCertificate = (id) => (dispatch) => {
 };
 
 export const getCategory = () => (dispatch) => {
-  axios.get("https://lekturapp.herokuapp.com/api/courses/categories", {
+  axios.get(`${API}/courses/categories`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
