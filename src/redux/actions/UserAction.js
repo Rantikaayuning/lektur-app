@@ -92,7 +92,7 @@ export const updateUserProfile = (fullname, email) => async (dispatch) => {
   let isUserLoading = true;
   dispatch(fetchLoading(isUserLoading))
   axios.put(
-    "/users/update",
+    `${API}/users/update`,
     {
       fullname,
       email,
