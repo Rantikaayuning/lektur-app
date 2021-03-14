@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Modal } from "react-bootstrap";
 
@@ -157,7 +157,7 @@ function TeacherDashboard() {
         </div>
       )}
 
-      {teacherProfile.length !== 0 && (
+      {/* {teacherProfile !== null && ( */}
         <div className="courses-container">
           <div className="courses-header">
             <h5>
@@ -181,7 +181,7 @@ function TeacherDashboard() {
             ))}
           </div>
         </div>
-      )}
+      {/* )} */}
       <Modal
         show={PopUpProfileImage}
         size="md"
