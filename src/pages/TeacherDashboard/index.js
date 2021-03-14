@@ -157,7 +157,7 @@ function TeacherDashboard() {
         </div>
       )}
 
-      {/* {teacherProfile !== null && ( */}
+      {teacherProfile !== null && (
         <div className="courses-container">
           <div className="courses-header">
             <h5>
@@ -181,7 +181,7 @@ function TeacherDashboard() {
             ))}
           </div>
         </div>
-      {/* )} */}
+      )}
       <Modal
         show={PopUpProfileImage}
         size="md"
