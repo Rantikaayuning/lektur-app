@@ -1,4 +1,4 @@
-import API from "../../api/index";
+import {API} from "../../api/index";
 import {
   GET_PROFILE_TEACHER,
   GET_STUDENTS_LIST,

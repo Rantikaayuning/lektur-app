@@ -1,4 +1,4 @@
-import API from "../../api/index";
+import {API} from "../../api/index";
 import {
   GET_QUESTIONS,
   POST_QUESTIONS,
