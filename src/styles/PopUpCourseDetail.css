@@ -1,0 +1,95 @@
+.modal-content {
+  width: 670px;
+}
+.modal-central {
+  width: 660px;
+  height: max-content;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-central-image {
+  height: 133px;
+}
+
+.image-content-box {
+  margin-top: 15px;
+}
+
+.modal-central-content {
+  margin-top: 15px;
+}
+
+.modal-central-body {
+  padding: 0;
+  width: 660px;
+  height: 80px;
+  background: #fafafa;
+}
+
+.modal-central-body p {
+  position: relative;
+  top: 25px;
+  left: 100px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #000000;
+}
+.modal-central-content .p1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #61d3a4;
+}
+.modal-central-content .p2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+.modal-central-content .p3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #999999;
+}
+
+.modal-central-login{
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+
+.modal-central-content-login{
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.modal-central-body-login{
+  font-size: 18px;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .modal-content {
+    position: relative;
+    left: 8%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    width: 550px;
+    position: relative;
+    left: -20px;
+  }
+}

@@ -1,0 +1,103 @@
+.login-page {
+  /* background-image: url("../assets/Rectangle4.png"); */
+  width: 100%;
+  height: 470px;
+  /* background-size: cover; */
+  /* position: absolute; */
+  margin: auto;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 531px;
+  height: 500px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding: 42px 42px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.login-header {
+  padding-bottom: 10px;
+  color: #16213b;
+}
+
+.login-welcome {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.login-yourAccount {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.email,
+.password {
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.email-password-field {
+  border-bottom: 2px rgb(214, 211, 211) solid;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  background: rgba(252, 252, 252, 1);
+}
+
+.login-email,
+.login-password {
+  border: none;
+  background: rgba(252, 252, 252, 1);
+}
+
+.login-email:focus,
+.login-password:focus {
+  outline: 0;
+}
+
+.login-page .login-form span {
+  color: rgb(236, 46, 46);
+}
+
+.login-page .login-form .register-redirect span {
+  color: skyblue;
+}
+
+.login-page .login-form .register-redirect span:hover {
+  color: skyblue;
+  text-decoration: underline;
+}
+
+.forget-pass {
+  text-align: right;
+  padding: 5px 0px 25px 0px;
+}
+
+.register-redirect a {
+  text-decoration: none;
+  color: skyblue;
+}
+
+.btn-login {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 60px;
+}
+
+.login-button {
+  border-radius: 1px;
+  padding: 8px 20px;
+  background: #16213b;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}

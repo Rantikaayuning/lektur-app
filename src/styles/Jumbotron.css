@@ -1,0 +1,142 @@
+.jumbotron {
+    /* margin-top: 50px; */
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+    padding-left: 70px;
+    background-image: url(../assets/Rectangle4.png);
+    border-radius: 0px;
+}
+
+.jumbotron-left {
+    padding-top: 90px;
+    padding-left: 30px;
+    width: 50%;
+    text-align: left;
+}
+
+.jumbotron-left h2 {
+    padding-top: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    color: #16213b;
+}
+
+.jumbotron-left h2 span {
+    margin-top: 2px;
+    margin-bottom: 70px;
+    display: block;
+}
+
+.jumbotron-left button {
+    padding: 10px 24px;
+    background: #16213b;
+    border-radius: 2px;
+    color: white;
+}
+
+
+/* jumbotron right*/
+
+.jumbotron-right {
+    width: 55%;
+}
+
+.jumbotron-right .video-content {
+    width: 90%;
+    height: 400px;
+    margin-top: 50px;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+}
+
+.jumbotron-right .video-content .bottom {
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.jumbotron-right .video-content iframe {
+    height: 270px;
+    width: 100%;
+}
+
+.jumbotron-right .video-content .bottom .right {
+    padding-top: 25px;
+}
+
+.jumbotron-right .video-content .bottom .right p {
+    margin-top: -10px;
+    padding-bottom: 5px;
+    width: 115px;
+    height: 17px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #ef9c27;
+}
+
+.jumbotron-right .video-content .p1 {
+    margin-bottom: 3px;
+    width: 88px;
+    height: 17px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3e89ae;
+}
+
+.jumbotron-right .video-content .p2 {
+    margin-bottom: 3px;
+    width: 281px;
+    height: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.jumbotron-right .video-content .p3 {
+    width: 87px;
+    height: 17px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 17px;
+    color: #999999;
+}
+
+@media screen and (max-width: 1024px) {
+    .jumbotron {
+        display: flex;
+        flex-direction: column;
+    }
+    .jumbotron-left {
+        width: 100%;
+    }
+    .jumbotron-right {
+        width: 105%;
+    }
+    .video-content .buttom .left{
+        width: 50%;
+    }
+    .video-content .buttom .right{
+        width: 50%;
+    }
+
+}

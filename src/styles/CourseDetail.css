@@ -1,0 +1,220 @@
+.course-detail {
+  width: 100%;
+  height: 398px;
+  display: flex;
+  justify-content: space-between;
+  background-color:rgb(15, 15, 15);
+  background-image: url(../assets/RectangleCDetail.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.course-detail-right {
+  position: absolute;
+  width: 600px;
+  height: 498px;
+  right: 85px;
+  top: 271px;
+  z-index: 0.99;
+  background: white;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.course-detail-right-material {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+.course-detail-right-material div p {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  text-align: left;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+.course-detail-right-material .rectangle {
+  width: 500px;
+  height: 54px;
+  border-bottom: 2px solid #e6e6e6;
+}
+.course-detail-right-material p {
+  position: relative;
+  left: -240px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.course-detail-right-material ul {
+  position: relative;
+  list-style-type: none;
+}
+.course-detail-right .p1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ef9c27;
+  margin-bottom: 5px;
+}
+.course-detail-right .p2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+.course-detail-left {
+  position: absolute;
+  width: 600px;
+  height: 498px;
+  left: 100px;
+  top: 271px;
+  padding-top: 0px;
+  padding-left: 2rem;
+}
+
+.course-detail-left p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #ffffff;
+}
+.main-course .center {
+  width: 100%;
+  height: 380px;
+  background: #e6e6e6;
+}
+.main-course .center .course-center {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  left: 100px;
+  top: 80px;
+  padding-top: 0px;
+  padding-left: 2rem;
+}
+.course-center h5 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+
+  color: #000000;
+}
+.course-center p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #000000;
+}
+.course-detail-left .p1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #ffffff;
+}
+.course-detail-left .p2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+
+  color: #ffffff;
+}
+.course-detail-left .p3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.course-detail-left .not-enrolled {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+
+  width: 151px;
+  height: 37px;
+
+  top: 377px;
+  background: #ef9c27;
+  border-radius: 2px;
+  border: none;
+}
+.course-detail-left .enrolled {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+
+  width: 200px;
+  height: 37px;
+
+  top: 377px;
+  background: #999;
+  border-radius: 2px;
+  border: none;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+/* For mobile phones: */
+@media screen and (max-width: 1040px) {
+  .main-course .center {
+    width: 100%;
+    height: 900px;
+    background: #e6e6e6;
+  }
+  .course-detail-right {
+    position: absolute;
+    width: 600px;
+    height: 498px;
+    right: 85px;
+    top: 850px;
+    z-index: 0.99;
+    background: white;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

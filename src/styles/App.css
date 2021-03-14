@@ -1,0 +1,96 @@
+.sidebar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    top: 20px;
+    left: 32px;
+    bottom: 0px;
+}
+
+.sidebar ul {
+    margin-top: 3px;
+}
+
+.sidebar ul li {
+    margin-top: -20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.sidebar ul li button {
+    padding: 0px 10px;
+    height: 30px;
+    background: #16213b;
+    border-radius: 2px;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 10px;
+}
+
+.sidebar ul li span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 10px;
+    color: #000000;
+}
+
+.sidebar .logo img {
+    margin-bottom: 5px;
+}
+
+.sidebar .left {
+    flex: 1;
+    padding-right: 0px;
+}
+
+.sidebar .center {
+    flex: 3;
+}
+
+.sidebar .right {
+    margin-top: -3px;
+    flex: 2;
+}
+
+.sidebar .center input {
+    left: 180px;
+    position: absolute;
+    width: 35%;
+    height: 20x;
+    padding: 4px;
+    text-align: left;
+}
+
+.sidebar .center i {
+    position: absolute;
+    top: 5px;
+    margin-left: 410px;
+}
+
+.sidebar ul {
+    padding-top: 3px;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.sidebar ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+
+/* vl line*/
+
+.vl {
+    top: -2px;
+    position: absolute;
+    border-left: 2px solid black;
+    height: 30px;
+}

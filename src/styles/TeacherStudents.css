@@ -1,0 +1,158 @@
+.student-sort-box {
+  background-color: white;
+  padding: 20px;
+  margin-right: 50px;
+  width: max-content;
+  /* margin-bottom: 100px; */
+  height: 300px;
+  margin-bottom: 50px;
+}
+
+.student-sort-box input {
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+.teacher-students-menu-box {
+  display: flex;
+  /* justify-content: space-around; */
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 72px;
+}
+span img {
+  cursor: pointer;
+}
+.sidebar-dropdown-choose {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: max-content;
+  border: none;
+}
+
+.sidebar-dropdown-item {
+  width: 100%;
+}
+
+.dropdown-menu-filter {
+  width: 100%;
+  border: none;
+}
+
+.sidebar-dropdown-menu-item {
+  width: 100%;
+}
+
+.dropdown-item {
+  padding: 7px;
+}
+
+.student-list-box {
+  background-color: white;
+  /* padding: 40px; */
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  width: 70%;
+}
+
+.student-list-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 40px 40px 20px 40px;
+}
+
+.student-list-name {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 40px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.student-list-empty {
+  display: flex;
+  height: 200px;
+}
+
+.student-list-header button {
+  padding: 10px 24px;
+  color: white;
+  background-color: #16213b;
+  border-radius: 2px;
+}
+
+.course-active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.course-active p {
+  color: darkgray;
+  text-align: right;
+}
+
+.course-completed p {
+  color: darkgray;
+  text-align: right;
+}
+
+.course-completed h3 {
+  color: #ef9c27;
+  text-align: right;
+}
+
+.course-pending {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.course-pending button {
+  color: white;
+  background-color: #ef9c27;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 24px;
+}
+
+.course-status {
+  padding: 10px;
+  width: 40%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .teacher-students-menu-box {
+    margin: 72px 40px 0px 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .teacher-students-menu-box {
+    display: block;
+    margin-right: 0px;
+  }
+  .student-sort-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    height: 90px;
+  }
+  .student-list-box {
+    width: 94%;
+  }
+  .sidebar-dropdown-choose {
+    padding-right: 30px;
+  }
+
+  .dropdown-menu-filter {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}

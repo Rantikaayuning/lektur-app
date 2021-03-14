@@ -1,0 +1,153 @@
+.student-assessment {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    background-size: cover;
+    height: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 72px;
+    padding-bottom: 174px;
+}
+
+.student-assessment-box {
+    margin: 5px 50px 50px 5px;
+    background-color: white;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.assessment-title {
+    padding: 5px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.final-assessment-title{
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 50px;
+    color: #000000;
+
+}
+
+.final-assessment-title .result{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    padding: 10px;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 15px;
+    color: #999;
+}
+
+.final-assessment-title .result .total{
+    font-size: 36px;
+    color: #EF9C27;
+}
+
+.student-assessment-box h4{
+    margin: 10px 5px 30px 15px;
+    font-weight: bold;
+}
+
+.assessment-questions {
+    margin: 50px 10px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    font-size: 14px;
+}
+
+.questions-answer-box{
+    width: 80%;
+}
+
+.submit-assessment {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.submit-assessment .button{
+    border: none;
+    background-color: #3E89AE;
+    padding: 12px 50px;
+    color: white;
+}
+
+.submit-assessment .disabled{
+    border: none;
+    background-color: #525f66;
+    padding: 12px 50px;
+    color: white;
+}
+
+.assessment-questions-result {
+    margin: 50px 10px 30px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    font-size: 14px;
+}
+
+.assessment-questions-result .container .answer{
+    font-weight: bold;
+    color: #999;
+}
+
+.assessment-questions-result .container .remark{
+    font-weight: bold;
+    color: #999;
+}
+
+.assessment-correct .correct {
+    color: #61D3A4;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.assessment-correct .wrong {
+    color: #DD5571;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container input[type=radio]{
+    width: 30px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.questions-answer-box .container img{
+    width: 15px;
+    margin: 0 7px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.submit-confirmation {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 1024px){
+    .student-assessment {
+        display: flex;
+        flex-direction: column;
+        background-color: whitesmoke;
+        background-size: cover;
+        height: 100%;
+        padding: 5%;
+        padding-bottom: 174px;
+    }
+}
+

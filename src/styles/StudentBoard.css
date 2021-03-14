@@ -1,0 +1,406 @@
+.student-board {
+    display: flex;
+    background-color: whitesmoke;
+    background-size: cover;
+    height: 100%;
+    padding-left: 150px;
+    padding-top: 72px;
+    padding-bottom: 174px;
+}
+
+.student-profile-box {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    /* width: 250px; */
+    /* height: 470px; */
+    height: max-content;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.student-profile {
+    display: flex;
+    flex-direction: column;
+    width: 279px;
+    height: max-content;
+    padding: 20px;
+    margin-right: 40px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.student-profile u{
+    cursor: pointer;
+    color: rgba(62, 137, 174, 1);
+}
+
+.student-profile p{
+    text-align: center;
+}
+
+.student-profile-image {
+    display: flex;
+    justify-content: center;
+}
+
+.student-profile-image img{
+    width: 140px;
+    height: 140px;
+    top: 165px;
+    left: 192px;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto 10px auto;
+}
+
+.student-profile h5 {
+    font-weight: bold;
+}
+
+.student-lesson {
+    display: flex;
+    flex-direction: column;
+    width: 950px;
+    height: 800px;
+    
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.student-course-assessment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.student-course-assessment p{
+    cursor: pointer;
+    pointer-events: auto;
+    color: black;
+}
+
+.student-course-assessment :link{
+    text-decoration: none;
+}
+
+.student-course-assessment p:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.student-course-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.student-course-list {
+    overflow: auto;
+}
+
+.student-course-detail img{
+    padding: 32px;
+    width: 35%;
+    height: fit-content;
+}
+
+.course-detail-first {
+    width: 30%;
+    padding: 35px 10px;
+    line-height: 20px;
+}
+
+.course-detail-first .title{
+    color: #999999;
+    cursor: pointer;
+}
+
+.course-detail-first .title-link{
+    color: #999999;
+    cursor: pointer;
+}
+
+.course-detail-first .title-link:hover{
+    color: #999999;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.course-detail-second .title {
+    color: #999999;
+    cursor: default;
+}
+
+.course-detail-second {
+    width: 35%;
+    padding: 32px;
+    text-align: right;
+}
+
+.course-detail-second button{
+    background-color: rgba(62, 137, 174, 1);
+    border: none;
+    width: 75%;
+    height: max-content;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 24px;
+    border-radius: 2px;
+}
+
+.course-detail-second button:hover{
+    background-color: rgb(49, 106, 134);
+}
+
+.assessment-detail {
+    padding: 32px;
+}
+
+.assessment-detail .lecture{
+    color: rgba(62, 137, 174, 1);
+}
+
+.assessment-detail h4:hover{
+    cursor: pointer;
+}
+
+.student-assess-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.student-assess-detail .complete {
+    color: #999;
+}
+
+.assessment-precentage h4{
+    font-size: 50px;
+    color: #EF9C27;
+}
+
+.assessment-precentage {
+    text-align: right;
+    padding: 32px;
+}
+
+.assessment-precentage p{
+    color: darkgray;
+}
+
+.assessment-precentage button{
+    color: #EF9C27;
+    border: 2px solid #EF9C27;
+    background-color: white;
+    padding: 10px 24px;
+    border-radius: 2px;
+}
+
+.assessment-precentage button:hover{
+    color: white;
+    border: 2px solid #EF9C27;
+    background-color: #EF9C27;
+    padding: 10px 24px;
+}
+
+form input {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.input-profile-student{
+    padding: 20px 0px;
+}
+
+.student-profile-form form{
+    margin-top: 20px;
+}
+
+.student-profile-edit p {
+   text-align: left;
+   /* padding-left: 20px; */
+}
+
+.student-profile-edit {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    margin-right: 40px;
+    width: 279px;
+    height: max-content;
+    /* height: 470px; */
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* .student-profile-edit button {
+    background-color: #16213B;
+    border-radius: 2px;
+    color: white;
+    font-size: 14px;
+    padding: 10px 24px;
+} */
+
+.download-certificate span{
+    cursor: pointer;
+    color: rgb(46, 162, 201);
+    font-style: italic;
+}
+
+.download-certificate span:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.button-download-certificate {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.button-download-certificate button{
+    width: max-content;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.edit-photo-icon {
+    width: 30px;
+    position: relative;
+    top: -40px;
+    left: 155px;
+    opacity: 0.8;
+}
+
+.edit-photo-icon:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.student-profile-edit .back-edit {
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+    color: rgb(49, 106, 134);
+}
+
+.student-profile-edit .back-edit {
+    color: rgb(37, 76, 95);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .student-board {
+        display: flex;
+        flex-direction: column;
+        background-color: whitesmoke;
+        background-size: cover;
+        justify-content: space-around;
+        height: 100%;
+        padding-left: 0;
+        padding-top: 72px;
+        padding-bottom: 174px;
+    }
+    .student-course-assessment {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .student-course-assessment p{
+        text-align: center;
+    }
+    .student-lesson {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 10%;
+        height: 100%;
+        padding: 30px;
+        background-color: white;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .student-course-detail {
+        display: flex;
+        flex-direction: column;
+    }
+    .course-detail-first {
+        width: 100%;
+        padding: 35px 10px;
+        line-height: 10px;
+        text-align: center;
+    }
+    .course-detail-second {
+        width: 100%;
+        margin: 35px 10px;
+        line-height: 10px;
+    }
+
+    .course-detail-second button{
+        width: 300px;
+    }
+    .student-profile-edit {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20%;
+        width: 100%;
+        height: 470px;
+        background-color: white;
+        text-align: center;
+    }
+    .student-profile {
+        display: flex;
+        flex-direction: column;
+        padding: 20%;
+        width: 100%;
+        height: 470px;
+        background-color: white;
+        text-align: center;
+    }
+    .student-profile-box {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25%;
+        width: 50%;
+        height: 470px;
+        background-color: white;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .student-course-detail {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .student-course-detail img {
+        width: 100%;
+        padding: 35px 20%;
+    }
+
+    .course-detail-first {
+        width: 100%;
+        padding: 0 35px;
+        line-height: 10px;
+        text-align: center;
+    }
+
+    .course-detail-second {
+        width: 100%;
+        text-align: center;
+    }
+    .course-detail-second button{
+        height: max-content;
+        width: 240px;
+        padding: 10px 24px;
+        line-height: 20px;
+    }
+    
+}

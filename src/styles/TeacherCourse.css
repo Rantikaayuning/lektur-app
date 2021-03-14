@@ -1,0 +1,357 @@
+.teacher-new-course-box {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 72px;
+}
+
+.teacher-new-course-title {
+    display: flex;
+}
+
+.teacher-new-course-title input{
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+.teacher-new-course-overview {
+    display: flex;
+}
+
+.teacher-new-course-overview textarea {
+    border: none;
+    background-color: whitesmoke;
+    overflow: auto;
+    resize: none;
+    outline: none;
+}
+
+.teacher-create-course-box {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 72px;
+}
+
+.teacher-create-course-title {
+    display: flex;
+}
+
+.teacher-create-course-title input{
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+.teacher-create-course-overview {
+    display: flex;
+}
+
+.teacher-create-course-overview textarea {
+    border: none;
+    background-color: whitesmoke;
+    overflow: auto;
+    resize: none;
+    outline: none;
+}
+
+.teacher-add-header-image{
+    display: flex;
+    flex-direction: column;
+}
+
+.teacher-add-header-image button {
+    border: 1px solid #EF9C27;
+    background-color: whitesmoke;
+    color: #EF9C27;
+    padding: 10px 24px;
+}
+
+.teacher-add-header-image button:hover {
+    border: 1px solid #EF9C27;
+    background-color: #EF9C27;
+    color: white;
+    padding: 10px 24px;
+}
+
+.teacher-add-header-image p{
+    color: #999999;
+}
+
+.teacher-save-new-course {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.teacher-save-new-course p{
+    width: 160px;
+    margin-top: 50px;
+}
+
+.teacher-save-new-course button {
+    margin: 30px;
+    color: white;
+    background-color: #16213B;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 2px;
+    margin-right: 40px;
+}
+
+.teacher-save-new-course button:hover {
+    background-color: #304880;;
+}
+
+.teacher-save-new-course button:disabled {
+    margin: 30px;
+    color: white;
+    background-color: #536ca8;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 2px;
+    margin-right: 40px;
+}
+
+.teacher-add-new-lesson-content h4{
+    font-weight: bold;
+}
+
+.teacher-add-new-lesson-button{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #3E89AE;
+}
+
+.teacher-add-new-lesson-button p:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.publish-and-delete-course {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 200px 40%;
+}
+
+.publish-and-delete-course button{
+    width: max-content;
+    padding: 10px 24px;
+    border: none;
+    background-color: #16213B;
+    color: white;
+    border-radius: 2px;
+}
+
+.publish-and-delete-course .delete{
+    width: max-content;
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 10px 26px;
+    cursor: pointer;
+}
+
+.add-new-lesson-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 42px 0 24px 0;
+}
+ 
+.add-new-lesson-input {
+    width: 50%;
+}
+
+.add-new-lesson-input h4 b{
+   color: black;
+}
+
+.input-number{
+    width: 20px;
+    border: none;
+    border-bottom: 1px solid rgba(159, 159, 159, 1);
+}
+
+.input-number:focus{
+    outline: 0;
+}
+
+.add-new-lesson-box h4{
+    font-size: 16px;
+}
+
+.add-new-lesson-title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    width: 80%;
+}
+
+.add-new-lesson-title input{
+    border: none;
+    outline: none;
+    background-color: white;
+    
+}
+
+.add-new-lesson-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-new-lesson-description textarea {
+    border: none;
+    background-color: white;
+    overflow: auto;
+    resize: none;
+    outline: none;
+    height: 150px;
+    width: 100%;
+}
+
+.upload-new-lesson .video-lesson{
+    border: 1px solid #EF9C27;
+    background-color: #EF9C27;
+    color: white;
+    padding: 10px 24px;
+    font-size: 14px;
+}
+
+.video-lesson .upload{
+    margin-left: 30px;
+}
+
+.upload-new-lesson .material-lesson{
+    border: 1px solid #EF9C27;
+    background-color: white;
+    color: #EF9C27;
+    padding: 10px 24px;
+    padding-left: 30px;
+    font-size: 14px;
+    display: flex;
+}
+
+.material-lesson .upload{
+    margin-left: 30px;
+}
+
+.upload-new-lesson .material-lesson:hover {
+    border: 1px solid #EF9C27;
+    background-color: #EF9C27;
+    color: white;
+    padding: 10px 24px;
+    font-size: 14px;
+}
+
+.upload-new-lesson p{
+    color: #999;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.upload-new-lesson .save{
+    text-align: end;
+    margin-top: 100px;
+}
+
+.save button{
+    background-color: #16213B;
+    color: white;
+    border: 1px solid #16213B;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 10px 24px;
+}
+
+.save{
+    width: 160px;
+}
+
+.save button:disabled{
+    background-color: #5e6f97;
+    border: 1px solid #5e6f97;
+}
+
+.upload-new-lesson input{
+    font-size: 16px;
+}
+
+.upload-new-lesson {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 60px;
+    margin-left: 18%;
+}
+
+.select-category{
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgba(0,0,0,.1);
+    background-color: whitesmoke;
+    color: gray;
+    font-size: 18px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.option-category{
+    background-color: rgba(0, 0, 0, 0.734);
+    color:whitesmoke;
+}
+
+@media screen and (max-width: 1024px) {
+    .teacher-create-course-box {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 72px;
+    }
+    .teacher-save-new-course button {
+        margin: 30px;
+        color: white;
+        background-color: #16213B;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 2px;
+        margin-right: 40px;
+    }
+    .teacher-save-new-course {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .add-new-lesson-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px;
+        background-color: white;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 42px 0 24px 0;
+    }
+    .add-new-lesson-description{
+        border: none;
+        background-color: white;
+        overflow: auto;
+        resize: none;
+        outline: none;
+    }
+    .add-new-lesson-input {
+        width: 100%;
+    }
+    .upload-new-lesson .save{
+        text-align: center;
+        margin-top: 80px;
+    }
+    .upload-new-lesson {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        margin-top: 60px;
+        margin-left: 25%;
+    }    
+}

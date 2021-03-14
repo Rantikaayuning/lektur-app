@@ -1,0 +1,291 @@
+/* For Desktop*/
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.sidebar ul {
+  position: absolute;
+  margin-top: 3px;
+}
+
+.sidebar ul li {
+  margin-top: -20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 17px;
+  color: #000000;
+  cursor: pointer;
+}
+.right .sidebar-signup-button {
+  margin-left: 10%;
+}
+.right .sidebar-signup-button button {
+  height: 30px;
+  background-color: #16213b;
+  border-radius: 2px;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 10px;
+  border: 8px solid #16213b;
+}
+.sidebar-login-button {
+  margin-left: 0;
+}
+.right .sidebar-login-button button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 10px;
+  color: #000000;
+  background-color: white;
+  border: none;
+  margin-left: 30%;
+}
+
+.sidebar .logo img {
+  margin-bottom: 5px;
+}
+
+.sidebar .left {
+  margin-top: 4px;
+  margin-left: 28px;
+  width: 10%;
+}
+
+.sidebar .center {
+  width: 40%;
+}
+
+.sidebar .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
+.sidebar .center input {
+  width: 90%;
+  height: 20x;
+  padding: 4px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.sidebar .center i {
+  cursor: pointer;
+  position: relative;
+  bottom: 50%;
+  left: 85%;
+}
+
+.sidebar ul {
+  padding-top: 3px;
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+}
+
+.sidebar ul li {
+  margin: auto 5px;
+}
+
+/* vl line*/
+
+.vl {
+  margin-left: 5%;
+  border-left: 2px solid black;
+  height: 30px;
+}
+
+.sidebar-dropdown {
+  background-color: white;
+  border: none;
+  caret-color: black;
+  color: black;
+}
+
+.sidebar-dropdown :hover {
+  color: black;
+  border: none;
+  box-shadow: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 35px;
+  left: 350px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content-img {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 47px;
+  left: 270px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.drop {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid rgb(172, 169, 169);
+}
+
+.drop div {
+  padding-top: 10px;
+}
+
+.sidebar-signup-button:hover .dropdown-content {
+  display: block;
+}
+
+.sidebar-signup-button:hover button {
+  background-color: #16213b;
+}
+.drop-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130%;
+  margin-left: 50%;
+}
+
+.profile-img{
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+.li-1 {
+  position: relative;
+  left: 10%;
+}
+.li-2 {
+  position: relative;
+  left: 30%;
+}
+.drop-img:hover .dropdown-content-img {
+  display: block;
+}
+
+.drop-img:hover button {
+  background-color: #16213b;
+}
+
+.drop:hover {
+  background-color: #16213b;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.form-navbar {
+  display: flex;
+  align-items: center;
+  width: 150%;
+}
+.for {
+  margin-left: 10%;
+}
+.for a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #000000;
+  padding-top: 5px;
+}
+
+/* For mobile phones: */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+  }
+  .sidebar ul {
+    position: relative;
+    left: -30%;
+    list-style-type: none;
+    display: flex;
+  }
+  .sidebar .left {
+    width: 30%;
+  }
+  .sidebar .center {
+    width: 110%;
+    height: 15%;
+  }
+  .sidebar .center i {
+    bottom: 100%;
+    cursor: pointer;
+  }
+  .sidebar .right {
+    position: relative;
+    left: 10%;
+    width: 100%;
+    height: 10%;
+  }
+}
+/* for tablet*/
+@media screen and (max-width: 1020px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+  }
+  .sidebar ul {
+    position: relative;
+    left: -30%;
+    list-style-type: none;
+    display: flex;
+  }
+  .sidebar .left {
+    width: 30%;
+  }
+  .sidebar .center {
+    width: 110%;
+    height: 15%;
+  }
+  .sidebar .center i {
+    bottom: 100%;
+    left: 85%;
+    cursor: pointer;
+  }
+  .sidebar .right {
+    position: relative;
+    left: 10%;
+    width: 100%;
+    height: 10%;
+  }
+}

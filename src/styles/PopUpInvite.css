@@ -1,0 +1,83 @@
+.pop-up-Invite {
+  padding: 50px 150px 50px 150px;
+}
+
+.modal-invite {
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  margin: 5px 10px 5px 10px;
+}
+
+/* .modal-invite .pop-up-Invite-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 150px 50px 150px;
+} */
+
+.invite-add-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 150px 0 150px;
+}
+
+.invite-email-list {
+  padding: 0 150px 0 150px;
+}
+
+.invite-button-invite {
+  display: flex;
+  justify-content: center;
+  padding: 0 150px 0 150px;
+}
+
+.invite-add-search input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 70%;
+}
+
+.invite-add-search button {
+  border: 1px solid #16213b;
+  background-color: white;
+  color: #16213b;
+  padding: 10px 24px;
+}
+
+.invite-add-search button:hover {
+  border: 1px solid #16213b;
+  background-color: #16213b;
+  color: white;
+  padding: 10px 24px;
+}
+
+.invite-button-invite button {
+  border: none;
+  padding: 10px 24px;
+  color: white;
+  background-color: #16213b;
+  margin-bottom: 20px;
+}
+
+.invite-email-list .student-email {
+  display: flex;
+  justify-content: space-between;
+}
+
+.invite-email-list .student-email .cancel-email {
+  color: #999;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .invite-add-search {
+    padding: 0 100px;
+  }
+
+  .invite-email-list {
+    padding: 0 100px;
+  }
+}

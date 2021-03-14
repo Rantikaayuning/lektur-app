@@ -1,0 +1,34 @@
+@import "./styles/Navbar.css";
+@import "./styles/Jumbotron.css";
+@import "./styles/Props.css";
+@import "./styles/content.css";
+@import "./styles/footer.css";
+@import "./styles/HomeButton.css";
+@import "./styles/SignUp.css";
+@import "./styles/login.css";
+@import "./styles/StudentBoard.css";
+@import "./styles/StudentMaterial.css";
+@import "./styles/TeacherDashboard.css";
+@import "./styles/PopUp.css";
+@import "./styles/StudentAssessment.css";
+@import "./styles/TeacherAssessment.css";
+@import "./styles/TeacherCourse.css";
+@import "./styles/TeacherStudents.css";
+@import "./styles/CourseDetail.css";
+@import "./styles/PopUpCourseDetail.css";
+@import "./styles/PopUpInvite.css";
+@import "./styles/CourseFilled.css";
+@import "./styles/CourseUpdate.css";
+@import "./styles/Loading.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

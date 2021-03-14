@@ -1,0 +1,387 @@
+.teacher-dashboard-container {
+  width: auto;
+  background-color: whitesmoke;
+  background-size: cover;
+  height: max-content;
+  display: flex;
+  font-size: 14px;
+  padding-left: 150px;
+  padding-top: 72px;
+  padding-bottom: 174px;
+}
+
+.teacher-profile {
+  width: 279px;
+  padding: 20px;
+  height: max-content;
+  /* height: 440px; 322 */
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.teacher-profile img {
+  width: 140px;
+  height: 140px;
+  top: 165px;
+  left: 192px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto 0px auto;
+}
+
+.name-email {
+  padding: 13px 0 20px 0;
+}
+.edit-teacher-profile {
+  cursor: pointer;
+  color: rgba(62, 137, 174, 1);
+}
+
+.input-profile {
+  padding: 20px;
+}
+
+form input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  padding-left: 10px;
+}
+
+.teacher-profile-edit p {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.teacher-profile-edit form {
+  padding-top: 25px;
+}
+
+.upload-image {
+  border-radius: 5px;
+  padding: 6px 15px;
+  border: 1px solid #16213b;
+  background-color: #ffffff;
+  color: #16213b;
+  font-weight: bold;
+}
+
+.upload-image:hover {
+  background-color: #16213b;
+  color: #ffffff;
+}
+
+.teacher-profile-popup {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.upload-image-popup {
+  border-radius: 5px;
+  padding: 6px 15px;
+  border: 1px solid #16213b;
+  background-color: #ffffff;
+  color: #16213b;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+.teacher-profile-popup img {
+  width: 150px;
+  height: 150px;
+  top: 165px;
+  left: 192px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto 15px auto;
+}
+
+.save-edit {
+  border-radius: 2px;
+  padding: 8px 20px;
+  background: #16213b;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.courses-container {
+  /* position: absolute; */
+  /* margin-top: 122px; */
+  margin-left: 49px; /* 122 + 39 + 230 */
+  width: 893px; /* 50% */
+  height: 600px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.courses-header {
+  padding: 30px 30px 10px 34px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.courses-header button {
+  border-radius: 2px;
+  padding: 8px 20px;
+  background: #16213b;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition-duration: 0.3s;
+  margin: 0px 10px;
+}
+
+.card-teacher-container {
+  height: 500px;
+}
+
+.courses-header a {
+  color: white;
+}
+
+.courses-header a:link {
+  text-decoration: none;
+}
+
+.courses-header button:hover {
+  background-color: #28385c;
+}
+
+.courses-header a:hover {
+  color: white;
+}
+
+.course-dashboard-info {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 0px 12px 34px;
+}
+
+.course-image {
+  padding-bottom: 10px;
+  width: 30%;
+}
+
+.course-info {
+  /* margin-bottom: 80px; */
+  width: 35%;
+}
+
+.course-all {
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 40px 20px 34px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.invite-edit-btn {
+  width: 25%;
+}
+
+.invite-edit-btn button {
+  border-radius: 2px;
+  padding: 8px 20px;
+  background: #ef9c27;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+
+.invite-edit-btn .btn-edit:hover {
+  background-color: #e9a94f;
+}
+
+.invite-edit-btn a {
+  color: white;
+}
+
+.btn-invite a {
+  color: #e9a94f;
+}
+
+.invite-edit-btn a:link {
+  text-decoration: none;
+}
+
+.invite-edit-btn a:hover {
+  color: white;
+}
+
+.invite-edit-btn .btn-invite {
+  border: 2px solid #ef9c27;
+  padding: 6px 14px;
+  color: #ef9c27;
+  background: white;
+  margin-right: 20px;
+}
+
+.invite-edit-btn .btn-invite:hover {
+  color: white;
+  background: #ef9c27;
+}
+
+.teacher-profile .edit-photo-icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -40px;
+  left: 50px;
+  opacity: 0.8;
+}
+
+.teacher-profile .edit-photo-icon:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.teacher-profile .back-edit {
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: underline;
+  color: rgb(49, 106, 134);
+}
+
+.teacher-profile .back-edit {
+  color: rgb(37, 76, 95);
+  cursor: pointer;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 1024px) {
+  .teacher-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1100px;
+  }
+
+  .teacher-profile {
+    position: static;
+    margin: 20px auto;
+  }
+  .courses-container {
+    position: static;
+    width: 100%;
+    height: 570px;
+    margin: 0px auto;
+  }
+
+  .teacher-profile-edit form {
+    padding-bottom: 25px;
+  }
+
+  .course-info {
+    font-size: large;
+    padding: 0 10px 0 0px;
+  }
+
+  .small-text {
+    font-size: 14px;
+  }
+
+  .invite-edit-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .invite-edit-btn .btn-invite {
+    margin-right: 0px;
+  }
+
+  .card-teacher-container {
+    height: 430px;
+  }
+}
+
+.popUp-loading {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 90px;
+}
+
+.popUp-loading p {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.upload-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 90px;
+}
+
+.upload-success p {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+/* .popup-upload{
+  position: relative;
+  width: 400px;
+  margin-left: 700px;
+} */
+
+@media only screen and (max-width: 768px) {
+  .course-info {
+    margin-right: 20px;
+  }
+}
+
+/* please ignore this at the moment */
+@media only screen and (max-width: 360px) {
+  .teacher-dashboard-container {
+    width: 100%;
+    height: 1800px;
+  }
+
+  .courses-container {
+    height: 1100px;
+  }
+  .course-all {
+    display: block;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .course-image {
+    width: 300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .course-info {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .invite-edit-btn button {
+    padding: 8px 40px;
+  }
+  .invite-edit-btn .btn-invite {
+    padding: 6px 30px;
+  }
+  .invite-edit-btn {
+    display: inline;
+    margin-left: 5px;
+  }
+
+  .btn-edit {
+    margin-left: 58px;
+  }
+}

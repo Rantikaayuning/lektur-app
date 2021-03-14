@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap");
+
+.signup-page{
+  width: 100%;
+  margin: auto;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  border: 2px solid black;
+  width: 531px;
+  height: 559px;
+  padding: 50px;
+  margin: auto;
+
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.form-select {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-select select {
+  margin-top: 10px;
+  padding: 5px 8px;
+  margin-bottom: 14px;
+  border: 1px solid #16213b;
+  background-color: #00030a;
+  font-family: Montserrat;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+.option {
+  background-color: #566585;
+}
+
+.signup-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #16213b;
+  margin-bottom: 15px;
+}
+
+.signup-account {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 5px;
+  color: #16213b;
+}
+
+.form {
+  width: 400px;
+  margin-top: 5px;
+}
+
+.form div {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  padding-top: 10px;
+  margin-top: 10px;
+
+  color: #000000;
+}
+
+.form div span {
+  color: rgb(236, 46, 46);
+}
+
+.form input {
+  border: none;
+  margin-top: 10px;
+  padding-left: 10px;
+  border-bottom: 1px solid rgba(159, 159, 159, 1);
+  width: 430px;
+  height: 42px;
+  background-color: rgba(252, 252, 252, 1);
+}
+
+.form input:focus {
+  outline: 0;
+}
+
+.btn-signup {
+  background: #16213b;
+  border-radius: 2px;
+  padding: 8px 20px;
+  width: 104px;
+  margin-left: 312px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.btn-signup:disabled {
+  background: #4f618b;
+  border-radius: 2px;
+  padding: 8px 20px;
+  width: 104px;
+  margin-left: 312px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.signup-login span {
+  color: skyblue;
+}
+
+.jumbotron {
+  background: url(../assets/Rectangle4.png);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+

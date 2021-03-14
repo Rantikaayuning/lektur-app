@@ -1,0 +1,361 @@
+.teacher-assessment {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  background-size: cover;
+  height: 100%;
+}
+
+.teacher-dashboard-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px 30% 0px 30%; /* 15px 500px 0px 500px; */
+  background-color: rgba(240, 166, 62, 0.2);
+}
+
+.teacher-dashboard-list p {
+  cursor: pointer;
+  color: black;
+}
+
+.teacher-dashboard-list .open {
+  font-weight: bold;
+}
+
+.teacher-dashboard-list :link {
+  text-decoration: none;
+}
+
+.teacher-dashboard-list :link :hover {
+  font-weight: bold;
+}
+
+.teacher-new-question {
+  margin: 20px 250px 10px 250px;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-question-title {
+  display: flex;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 72px;
+}
+
+.teacher-question-title h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.teacher-option-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.teacher-option-box h5 {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.teacher-answer-option {
+  width: 50%;
+}
+
+.teacher-answer-option .container input {
+  border: none;
+  /* border-bottom: 1px solid grey; */
+  outline: none;
+}
+
+.teacher-answer-option hr {
+  width: 93%;
+}
+
+.teacher-answer-remark textarea {
+  overflow: auto;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(214, 211, 211);
+  background-color: rgb(253, 251, 251);
+}
+
+.teacher-answer-remark textarea:focus {
+  outline: none;
+  background-color: #eee;
+}
+
+/* .teacher-option-title input {
+  border: none;
+  outline: none;
+  margin: 0;
+  border: 100%;
+} */
+
+.teacher-option-title h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.number-input-tag {
+  padding-bottom: 10px;
+  padding-right: 0px;
+  width: 3%;
+  border: none;
+  background-color: rgb(253, 251, 251);
+}
+
+.question-input-tag {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  width: 94%;
+  border: none;
+  border-bottom: 2px solid rgb(214, 211, 211);
+  background-color: rgb(253, 251, 251);
+}
+
+.number-input-tag:focus,
+.question-input-tag:focus {
+  outline: none;
+  background-color: #eee;
+}
+
+.question-answer-tag {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.teacher-add-more {
+  display: flex;
+  justify-content: space-between;
+}
+
+.teacher-add-more button {
+  border: 1px solid #ef9c27;
+  background-color: white;
+  color: #ef9c27;
+  padding: 10px 24px;
+  margin-bottom: 20px;
+}
+
+.teacher-add-more button:hover {
+  border: 1px solid #ef9c27;
+  background-color: #ef9c27;
+  color: white;
+  padding: 10px 24px;
+}
+
+.add-new-question {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 250px 100px 250px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #3e89ae;
+}
+
+.trash-pic {
+  margin-top: 3px;
+  margin-right: 15px;
+  width: 30px;
+  height: 35px;
+}
+
+.trash-pic:hover {
+  cursor: pointer;
+}
+
+.save-exam-question {
+  display: flex;
+  margin: 0px 250px 100px 250px;
+  justify-content: center;
+}
+
+.save-update-question {
+  margin-top: 50px;
+}
+
+.save-exam-question button {
+  border: none;
+  background-color: #16213b;
+  border-radius: 2px;
+  color: white;
+  padding: 10px 24px;
+}
+
+.save-question-box {
+  padding: 20px;
+}
+
+.teacher-option-save h4 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 22px 0 0 22px;
+}
+
+.teacher-option-save img:hover {
+  cursor: pointer;
+}
+
+.save-question-box {
+  width: 100%;
+}
+
+.teacher-save-question-box {
+  width: 100%;
+  margin-bottom: 174px;
+  padding-left: 100px;
+}
+
+.teacher-new-question-save {
+  margin: 20px 280px 10px 250px;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.questions-answer-box-save {
+  width: 100%;
+}
+
+.questions-answer-box-save .question-dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.question-dropdown img {
+  cursor: pointer;
+}
+
+.more-option-save {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-per-question button {
+  background-color: #16213b;
+  color: white;
+  border: 1px solid #16213b;
+  border-radius: 2px;
+  padding: 10px 24px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .teacher-question-title {
+    margin-left: 40px;
+  }
+  .teacher-new-question {
+    margin: 20px 40px 10px 40px;
+  }
+  .add-new-question {
+    margin: 20px 40px 100px 40px;
+  }
+  .teacher-new-question-save {
+    margin: 20px 80px 10px 0px;
+  }
+  .teacher-save-question-box {
+    padding-left: 80px;
+  }
+  .teacher-answer-remark textarea {
+    margin-left: 15px;
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .teacher-answer-remark {
+    padding-left: 50px;
+  }
+  .teacher-answer-remark textarea {
+    margin-left: 0px;
+    width: 96%;
+  }
+  .teacher-save-question-box .teacher-question-title {
+    margin-left: 0px;
+  }
+  .teacher-dashboard-list p {
+    left: 50px;
+    position: relative;
+    margin-right: 5rem;
+  }
+}
+
+.container-assessment {
+  display: flex;
+  padding-bottom: 7px;
+  margin-right: 5px;
+}
+
+.options-table {
+  /* border: 1px solid black; */
+  width: 85%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  border: none;
+  border-bottom: 2px solid rgb(214, 211, 211);
+  background-color: rgb(253, 251, 251);
+}
+
+.options-table:focus {
+  outline: none;
+  background-color: #eee;
+}
+
+.radio-option {
+  margin-right: 14px;
+  margin-top: 16px;
+  margin-left: 10px;
+}
+
+.answer-title {
+  padding-left: 13px;
+}
+
+.option-deletion-btn {
+  border: none;
+  background-color: white;
+  padding: 10px;
+  color: rgb(82, 79, 79);
+}
+
+.option-deletion {
+  border: none;
+  margin-right: 10px;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  background: whitesmoke;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.option-deletion:hover {
+  color: blue;
+}
+
+.container-answer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
