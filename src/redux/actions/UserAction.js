@@ -9,6 +9,7 @@ import {
 } from "../types/UserLogin";
 import jwt_decode from "jwt-decode";
 import Cookies from "js-cookie";
+import axios from "axios";
 
 const token = Cookies.get("token");
 
@@ -22,7 +23,7 @@ export const fetchLoading = (payload) => {
 export const postLogin = (body) => async (dispatch) => {
   let isUserLoading = true;
   dispatch(fetchLoading(isUserLoading))
-  return API.post("/users/login", body)
+  return axios.post(`${API}/users/login`, body)
     .then((response) => {
       dispatch({
         type: LOGIN,
@@ -45,7 +46,7 @@ export const postLogin = (body) => async (dispatch) => {
 export const postSignup = (role, payload) => async (dispatch) => {
   let isUserLoading = true;
   dispatch(fetchLoading(isUserLoading))
-  API.post(`/users/register?status=${role}`, payload)
+  axios.post(`${API}/users/register?status=${role}`, payload)
     .then((response) => {
       if (response.status === 201) {
         dispatch({
@@ -67,7 +68,7 @@ export const postSignup = (role, payload) => async (dispatch) => {
 
 export const getUserProfile = (access_token = null) => (dispatch) => {
   // console.log(access_token);
-  API.get("/users/profile", {
+  axios.get(`${API}/users/profile`, {
     headers: {
       Authorization: access_token
         ? `Bearer ${access_token}`
@@ -90,7 +91,7 @@ export const getUserProfile = (access_token = null) => (dispatch) => {
 export const updateUserProfile = (fullname, email) => async (dispatch) => {
   let isUserLoading = true;
   dispatch(fetchLoading(isUserLoading))
-  API.put(
+  axios.put(
     "/users/update",
     {
       fullname,
@@ -128,7 +129,7 @@ export const updateProfileImage = (file) => async (dispatch) => {
   const data = new FormData();
   data.append("file", file);
 
-  API.put("/users/update/image", data, {
+  axios.put(`${API}/users/update/image`, data, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

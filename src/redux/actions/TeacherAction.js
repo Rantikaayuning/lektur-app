@@ -9,6 +9,7 @@ import {
   FETCH_ACCEPT_LOADING
 } from "../types/TeacherTypes";
 import Cookies from "js-cookie";
+import axios from "axios"
 
 const token = Cookies.get("token");
 
@@ -32,7 +33,7 @@ export const fetchAcceptLoading = (payload) => {
 export const getTeacherCourses = (access_token = null) => (dispatch) => {
   let isLoading = true;
   dispatch(fetchLoading(isLoading));
-  API.get(`teacher/profile`, {
+  axios.get(`${API}/teacher/profile`, {
     headers: {
       Authorization: access_token
         ? `Bearer ${access_token}`
@@ -60,7 +61,7 @@ export const getTeacherCourses = (access_token = null) => (dispatch) => {
 export const getStudentList = (courseId )=> dispatch => {
   let isLoading = true;
   dispatch(fetchLoading(isLoading));
-  API.get(`/teacher/courses/student?courseId=${courseId}`, {
+  axios.get(`${API}/teacher/courses/student?courseId=${courseId}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -81,9 +82,9 @@ export const getStudentList = (courseId )=> dispatch => {
     });
 };
 export const postStudentInvite = (courseId, body) => dispatch => {
-  API({
+  axios({
     method: "post",
-    url: `/teacher/courses/invite?courseId=${courseId}`,
+    url: `${API}/teacher/courses/invite?courseId=${courseId}`,
     data: body,
     headers: {
       Authorization: `Bearer ${token}`,
@@ -104,9 +105,9 @@ export const postStudentInvite = (courseId, body) => dispatch => {
 export const putStudentApprove = (courseId, studentId) => dispatch => {
   let isAcceptLoading = true;
   dispatch(fetchAcceptLoading(isAcceptLoading));
-  API({
+  axios({
     method: "put",
-    url: `/teacher/courses/student/approve?courseId=${courseId}&studentId=${studentId}`,
+    url: `${API}/teacher/courses/student/approve?courseId=${courseId}&studentId=${studentId}`,
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -127,9 +128,9 @@ export const putStudentApprove = (courseId, studentId) => dispatch => {
     });
 };
 export const getSearchStudent = (courseId, body) => dispatch => {
-  API({
+  axios({
     method: "post",
-    url: `/teacher/courses/student/search?courseId=${courseId}`,
+    url: `${API}/teacher/courses/student/search?courseId=${courseId}`,
     headers: {
       Authorization: `Bearer ${token}`,
     },

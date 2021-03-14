@@ -1,4 +1,4 @@
-// import API from "../../api/index";
+import {API} from "../../api/index";
 import {
   GET_ALL_COURSES,
   GET_COURSE_DETAIL,
@@ -25,7 +25,7 @@ import {
 import Cookies from "js-cookie";
 import axios from "axios";
 
-const API = 'https://lekturapp.herokuapp.com/api'
+
 const token = Cookies.get("token");
 
 export const fetchLoading = (payload) => {

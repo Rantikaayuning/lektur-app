@@ -6,7 +6,7 @@ import {
   UPDATE_QUESTION,
   FETCH_LOADING,
 } from "../types/AssessmentTypes";
-
+import axios from "axios";
 import Cookies from "js-cookie";
 
 const token = Cookies.get("token");
@@ -21,7 +21,7 @@ export const fetchLoading = (payload) => {
 export const getQuestions = (id) => (dispatch) => {
   let isLoading = true;
   dispatch(fetchLoading(isLoading));
-  API.get(`/assessment/?courseId=${id}`, {
+  axios.get(`${API}/assessment/?courseId=${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -44,7 +44,7 @@ export const getQuestions = (id) => (dispatch) => {
 };
 
 export const postAssessment = (body, id) => async (dispatch) => {
-  API.post(`/assessment/create?courseId=${id}`, JSON.stringify(body), {
+  axios.post(`${API}/assessment/create?courseId=${id}`, JSON.stringify(body), {
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-type": "application/json",
@@ -65,8 +65,8 @@ export const postAssessment = (body, id) => async (dispatch) => {
 
 export const deleteQuestion = (courseId, questionId) => () => {
   return new Promise((resolve) => {
-    API.delete(
-      `/assessment/delete?courseId=${courseId}&questionId=${questionId}`,
+    axios.delete(
+      `${API}/assessment/delete?courseId=${courseId}&questionId=${questionId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -86,8 +86,8 @@ export const deleteQuestion = (courseId, questionId) => () => {
 export const putFinalScore = (score, id) => (dispatch) => {
   let isLoading = true;
   dispatch(fetchLoading(isLoading));
-  API.put(
-    `/assessment/result?courseId=${id}`,
+  axios.put(
+    `${API}/assessment/result?courseId=${id}`,
     {
       score,
     },
@@ -114,8 +114,8 @@ export const putFinalScore = (score, id) => (dispatch) => {
 };
 
 export const updateQuestion = (body, id, questionId) => async (dispatch) => {
-  API.put(
-    `/assessment/update?courseId=${id}&questionId=${questionId}`,
+  axios.put(
+    `${API}/assessment/update?courseId=${id}&questionId=${questionId}`,
     JSON.stringify(body),
     {
       headers: {
