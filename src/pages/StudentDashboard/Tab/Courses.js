@@ -61,7 +61,7 @@ const StudentBoardCourses = () => {
                 <>
                 {studentCourses.course.map((item, index) => (
                 <div>
-                    {item.status === 2 ? (
+                    {item.status === 2 && (item.courseId !== undefined || item.courseId !== null)? (
                     <div className='student-course-detail' key={index}>
                         <img src={item.courseId.image ? item.courseId.image : defaultImg} alt='courses'/>
                         <div className='course-detail-first'>
@@ -77,7 +77,7 @@ const StudentBoardCourses = () => {
                             <p><button onClick={() => handlePopUpContent(item.courseId._id)}>Review</button></p>
                         </div>
                     </div> 
-                    ) : item.status === 1 ? (
+                    ) : item.status === 1 && (item.courseId !== undefined || item.courseId !== null)? (
                     <div className='student-course-detail' key={index}>
                         <img src={item.courseId.image ? item.courseId.image : defaultImg} alt='courses'/>
                         <div className='course-detail-first'>
@@ -93,8 +93,10 @@ const StudentBoardCourses = () => {
                             <p><button onClick={() => handlePopUpContent(item.courseId._id)}>Lesson {item.totalSeenCourses === 0 ? '' : `#${item.totalSeenCourses}`}</button></p>
                         </div>
                     </div> 
+                    ) : item.courseId === undefined || item.courseId === null ? (
+                        <div></div>
                     ) : (
-                    <div className='student-course-detail' key={index}>
+                        <div className='student-course-detail' key={index}>
                         <img src={item.courseId.image ? item.courseId.image : defaultImg} alt='courses'/>
                         <div className='course-detail-first'>
                             <p><b>{item.courseId.title}</b></p>
@@ -104,10 +106,12 @@ const StudentBoardCourses = () => {
                             <p className='title'>Waiting Approval</p>
                         </div>
                     </div>  
-                    ) }                  
+                    )}                  
                 </div>
                 ))}
                 </>
+                // ) : studentCourses.course.courseId === undefined && (
+                //     <div className='student-course-detail'></div>    
                 )}
                 </div>
                 

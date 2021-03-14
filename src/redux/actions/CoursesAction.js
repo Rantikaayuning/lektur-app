@@ -95,6 +95,8 @@ export const postEnrollCourse = (id) => (dispatch) => {
 };
 
 export const getStudentCourses = (payload) => (dispatch) => {
+  let isLoading = true;
+  dispatch(fetchLoading(isLoading));
   axios.get(
     `${API}/student/profile`,
     {
@@ -105,15 +107,19 @@ export const getStudentCourses = (payload) => (dispatch) => {
     payload
   )
     .then((response) => {
-      if (response.status === 200) {
+      // if (response.status === 200) {
         dispatch({
           type: GET_COURSE_STUDENT,
           payload: response.data.result,
         });
-      }
+        let isLoading = false;
+        dispatch(fetchLoading(isLoading));
+      // }
     })
     .catch(() => {
       console.log("error");
+      let isLoading = false;
+      dispatch(fetchLoading(isLoading));
     });
 };
 
