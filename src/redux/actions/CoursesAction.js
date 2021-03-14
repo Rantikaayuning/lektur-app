@@ -39,7 +39,7 @@ export const fetchLoading = (payload) => {
 //   dispatch(fetchLoading(isLoading));
 
 export const getCourses = (payload) => (dispatch) => {
-  axios.get("https://lekturapp.herokuapp.com/courses/all", payload)
+  axios.get("https://lekturapp.herokuapp.com/api/courses/all", payload)
     .then((response) => {
       if (response.status === 200) {
         dispatch({
@@ -447,7 +447,7 @@ export const getCertificate = (id) => (dispatch) => {
 };
 
 export const getCategory = () => (dispatch) => {
-  API.get("https://lekturapp.herokuapp.com/courses/categories", {
+  API.get("https://lekturapp.herokuapp.com/api/courses/categories", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
