@@ -7,6 +7,15 @@
     padding-top: 72px;
     padding-bottom: 174px;
 }
+.student-board-close {
+    display: none;
+    background-color: whitesmoke;
+    background-size: cover;
+    height: 100%;
+    padding-left: 150px;
+    padding-top: 72px;
+    padding-bottom: 174px;
+}
 
 .student-profile-box {
     display: flex;

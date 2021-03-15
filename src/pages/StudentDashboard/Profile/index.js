@@ -148,6 +148,7 @@ const StudentProfile = () => {
       )}
        <Modal
         show={PopUpProfileImage}
+        backdropClassName='backdrop-content'
         size="md"
         onHide={() => setPopUpProfileImage(false)}
         className="popup-upload"

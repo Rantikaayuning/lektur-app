@@ -40,6 +40,8 @@ export const PopUpInvite = props => {
     <>
       <Modal
         show={props.show}
+        backdropClassName='backdrop-content'
+        centered={true}
         size="lg"
         onHide={props.onHide}
         dialogClassName="modal-invite-student"

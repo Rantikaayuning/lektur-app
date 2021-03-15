@@ -91,6 +91,16 @@ form input {
   margin: 20px auto;
 }
 
+.upload-image-popup:hover {
+  border-radius: 5px;
+  padding: 6px 15px;
+  border: 1px solid #16213b;
+  background-color: #16213b;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
 .teacher-profile-popup img {
   width: 150px;
   height: 150px;

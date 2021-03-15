@@ -185,6 +185,7 @@ function TeacherDashboard() {
       <Modal
         show={PopUpProfileImage}
         size="md"
+        backdropClassName='backdrop-content'
         onHide={() => setPopUpProfileImage(false)}
         className="popup-upload"
         aria-labelledby="example-custom-modal-styling-title"

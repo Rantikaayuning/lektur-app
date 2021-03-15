@@ -120,6 +120,7 @@ const StudentBoardCourses = () => {
                 {popUpContent.length > 0 && courseDetail !== null && isLoading === false ? (
                 <Modal
                 show={contentModal}
+                backdropClassName='backdrop-content'
                 size='lg'
                 onHide={() => setContentModal(false)}
                 className='pop-up-course-box'
@@ -150,6 +151,7 @@ const StudentBoardCourses = () => {
                 ) : isLoading === true ? (
                 <Modal
                 show={contentModal}
+                backdropClassName='backdrop-content'
                 size='lg'
                 onHide={() => setContentModal(false)}
                 className='pop-up-course-box'
@@ -164,6 +166,7 @@ const StudentBoardCourses = () => {
                 ) : (
                 <Modal
                 show={contentModal}
+                backdropClassName='backdrop-content'
                 size='lg'
                 onHide={() => setContentModal(false)}
                 className='pop-up-course-box'
@@ -178,10 +181,10 @@ const StudentBoardCourses = () => {
                 )}
 
                 {/* material popup */}
-                {/* material popup */}
                 {popUpMaterial.length !== null && isLoading === false ? (
                 <Modal
                 show={materialModal}
+                backdropClassName='backdrop-content'
                 size='lg'
                 onHide={() => setMaterialModal(false)}
                 dialogClassName="modal-90w"
@@ -206,6 +209,7 @@ const StudentBoardCourses = () => {
                 ) : isLoading === true ? (
                 <Modal
                 show={materialModal}
+                backdropClassName='backdrop-content'
                 size='lg'
                 onHide={() => setMaterialModal(false)}
                 dialogClassName="modal-90w"
@@ -220,6 +224,7 @@ const StudentBoardCourses = () => {
                 ) : (
                 <Modal
                 show={materialModal}
+                backdropClassName='backdrop-content'
                 size='lg'
                 onHide={() => setMaterialModal(false)}
                 dialogClassName="modal-90w"
