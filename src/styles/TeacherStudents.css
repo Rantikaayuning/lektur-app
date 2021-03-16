@@ -139,10 +139,10 @@ span img {
   }
   .student-sort-box {
     margin-bottom: 20px;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     width: 94%;
-    height: 90px;
+    /* height: 90px; */
   }
   .student-list-box {
     width: 94%;

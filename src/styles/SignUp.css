@@ -4,7 +4,6 @@
   width: 80%;
   margin: auto;
   display: flex;
-  padding: 50px;
   justify-content:center;
   align-items: center;
 }
@@ -151,11 +150,12 @@ select:hover {
   background-size: cover;
   height: 100%;
   width: 100%;
+  padding: 120px;
 }
 
 @media screen and (max-width: 480px){
   .signup{
-    width: 350px;
+    width: 330px;
   }
 
   .email-password-username-field{

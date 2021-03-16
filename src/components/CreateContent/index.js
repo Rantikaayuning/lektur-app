@@ -114,16 +114,16 @@ export default function CreateContent() {
                         <button className='video-lesson' onClick={submitVideo}>Upload Video</button>
                     ) : (
                         <>
-                            {videoKey != null ? (
-                                <button className='video-lesson'>Video Saved</button>
-                            ) : (
-                                <div className="loading-dot">
-                                    <div>
-                                        <div className="dot-pulse"></div>
-                                        <div className="upload">uploading</div>
-                                    </div>
-                                    <div onClick={cancelVideo} className="cancel">Cancel</div>
-                                </div>
+                        {videoKey === 201 ? (
+                        <button className='video-lesson'>Video Saved</button>
+                        ) : (
+                            <div className="loading-dot">
+                            <div>
+                              <div className="dot-pulse"></div>
+                              <div className="upload">uploading</div>
+                            </div>
+                            <div onClick={cancelVideo} className="cancel">Cancel</div>
+                          </div>                     
                             )}
                         </>
                     )}

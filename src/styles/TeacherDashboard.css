@@ -4,8 +4,9 @@
   background-size: cover;
   height: max-content;
   display: flex;
+  justify-content: center;
   font-size: 14px;
-  padding-left: 150px;
+  /* padding-left: 150px; */
   padding-top: 72px;
   padding-bottom: 174px;
 }
@@ -271,8 +272,10 @@ form input {
   .teacher-dashboard-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     width: 100%;
-    height: 1100px;
+    height: 1300px;
+    padding-left: 0px;
   }
 
   .teacher-profile {
@@ -281,7 +284,7 @@ form input {
   }
   .courses-container {
     position: static;
-    width: 100%;
+    width: 600px;
     height: 570px;
     margin: 0px auto;
   }
@@ -350,25 +353,38 @@ form input {
   margin-left: 700px;
 } */
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .course-info {
     margin-right: 20px;
+  }
+} */
+
+@media screen and (max-width: 414px){
+  .courses-container{
+      width: 450px;
+  }
+  .course-all{
+      display: flex;
   }
 }
 
 /* please ignore this at the moment */
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 370px) {
   .teacher-dashboard-container {
     width: 100%;
-    height: 1800px;
+    height: 1300px;
+    padding-left: 0px;
   }
 
   .courses-container {
-    height: 1100px;
+    height: 550px;
+    width: 400px;
   }
   .course-all {
-    display: block;
+    /* display: block; */
     border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: column;
   }
   .course-image {
     width: 300px;
@@ -389,9 +405,20 @@ form input {
   .invite-edit-btn {
     display: inline;
     margin-left: 5px;
+    width: max-content;
   }
 
   .btn-edit {
     margin-left: 58px;
+  }
+}
+
+@media screen and (max-width: 280px){
+  .courses-container{
+      width: 320px;
+   
+  }
+  .course-all{
+      margin: 20px 20px 20px 8px;
   }
 }

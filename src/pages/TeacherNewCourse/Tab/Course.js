@@ -64,6 +64,10 @@ const TeacherCourseTab = (props) => {
     dispatch(getCategory())
   }, [dispatch])
 
+  const cancelMaterial = () => {
+    setAdd2(false)
+}
+
   // console.log(categories);
 
   return (
@@ -140,7 +144,10 @@ const TeacherCourseTab = (props) => {
                   ) : (
                     <>
                       {getTitle === null ? (
+                        <div className="loading-dot">
                         <div id="small-loader-navbar"></div>
+                        <div onClick={cancelMaterial} className="cancel">Cancel</div>
+                        </div>
                       ) : (
                         <div></div>
                       )}

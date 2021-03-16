@@ -1,4 +1,3 @@
-/* For Desktop*/
 .sidebar {
   display: flex;
   flex-wrap: wrap;
@@ -175,7 +174,7 @@
   margin-left: 50%;
 }
 
-.profile-img{
+.profile-img {
   width: 54px;
   height: 54px;
   border-radius: 50%;
@@ -230,6 +229,7 @@
     justify-content: space-between;
     align-items: center;
     height: 40vh;
+    width: 100%;
   }
   .sidebar ul {
     position: relative;
@@ -254,15 +254,19 @@
     width: 100%;
     height: 10%;
   }
+  form input {
+    width: 70%;
+  }
 }
 /* for tablet*/
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
   .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 30vh;
+    width: 100%;
   }
   .sidebar ul {
     position: relative;
@@ -282,10 +286,40 @@
     left: 85%;
     cursor: pointer;
   }
+  form input {
+    width: 70%;
+  }
   .sidebar .right {
     position: relative;
     left: 10%;
     width: 100%;
     height: 10%;
+  }
+}
+@media screen and (max-width: 476px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+    width: 100%;
+  }
+  .sidebar ul {
+    list-style-type: none;
+    margin-left: -40%;
+  }
+  .sidebar .left {
+    margin-left: -20%;
+  }
+  .sidebar .center {
+    width: 100%;
+    height: 15%;
+  }
+  .li-1 {
+    display: none;
+  }
+  div .form-navbar {
+    margin-left: 20%;
   }
 }

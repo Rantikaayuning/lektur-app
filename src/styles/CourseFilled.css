@@ -30,7 +30,6 @@
   border-radius: 2px;
   left: 220px;
   margin-top: 42px;
-  min-height: 280px;
   height: max-content;
 }
 
@@ -43,8 +42,7 @@
 }
 
 .course-filled-content-card div {
-  padding-top: 20px;
-  padding-left: 20px;
+  padding: 20px;
   text-align: left;
 }
 .course-filled-content-card-left {
@@ -130,7 +128,7 @@
   /* top: 40px;
   left: 20px; */
   width: 100%;
-  height: 200px;
+  height: 240px;
 }
 .image-computer1 iframe {
   /* position: relative; */
@@ -166,37 +164,69 @@
   line-height: 17px;
   cursor: pointer;
 }
+
 @media screen and (max-width: 768px) {
   .course-filled-content-card {
     width: 500px;
     display: flex;
     flex-direction: column;
-    height: 40rem;
   }
 
   .course-detail-filled {
     position: relative;
-    left: 57px;
+    left: 30px;
     top: 20px;
+    align-items:inherit;
   }
   .course-detail-filled p {
-    width: 500px;
+    width: 300px;
   }
-  .span-paragraph {
+  /* .span-paragraph {
     padding-inline-end: 55rem;
-  }
-  .image-computer1 img {
-    top: 20px;
-    left: 2rem;
+  } */
+  .image-computer1 iframe {
+    /* top: 20px; */
+    /* left: 2rem; */
+    width: 280px;
+    height: 150px;
   }
   .course-filled-content p {
     position: relative;
-    left: 255px;
+    left: 270px;
   }
   .add-new-lesson {
-    left: 0px;
+    left: -90px;
   }
   .delete-course {
     margin-bottom: 70px;
+  }
+  .card-filled{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: auto;
+    margin-top: 20px;
+    min-height: none;
+  }
+  .course-filled-content-card div{
+    padding-left: 10px;
+  }
+  .main-course-filled button{
+    margin-left: 0px;
+  }
+  .course-filled-content-card-left{
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .card-filled{
+    margin: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 280px){
+  .card-filled{
+    margin: 20px 15px;
   }
 }

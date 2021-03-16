@@ -272,7 +272,7 @@
 
 @media only screen and (max-width: 768px) {
   .teacher-answer-remark {
-    padding-left: 50px;
+    /* padding-left: 50px; */
   }
   .teacher-answer-remark textarea {
     margin-left: 0px;
@@ -282,9 +282,29 @@
     margin-left: 0px;
   }
   .teacher-dashboard-list p {
-    left: 50px;
+    /* left: 50px; */
     position: relative;
-    margin-right: 5rem;
+    /* margin-right: 5rem; */
+    margin: 10px;
+  }
+  .teacher-create-course-overview textarea{
+    width: 305px;
+  }
+  .teacher-answer-option{
+    width: 100%;
+  }
+  .teacher-option-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .more-option-save{
+    display: flex;
+    flex-direction: column;
+  }
+  .save-exam-question{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 70px;
   }
 }
 
@@ -363,3 +383,5 @@
   width: 25px;
   background-color: #eee;
 }
+
+

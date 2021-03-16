@@ -352,6 +352,18 @@
         justify-content: center;
         width: 50%;
         margin-top: 60px;
-        margin-left: 25%;
+        margin-left: 0px;
     }    
+    .teacher-new-course-overview textarea{
+        width: 370px;
+    }
+
 }
+
+@media screen and (max-width: 280px){
+    .teacher-new-course-overview textarea{
+        width: 280px;
+    }
+}
+
+
