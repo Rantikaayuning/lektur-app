@@ -12,15 +12,14 @@ import {
   DropdownItem,
 } from "reactstrap";
 import { getUserProfile } from "../../redux/actions/UserAction";
-import {
-  getCourseSearch,
-  getCategory,
-} from "../../redux/actions/CoursesAction";
+import { getCourseSearch } from "../../redux/actions/CoursesAction";
 import defaultPhoto from "../../assets/user.png";
+import { NotificationContainer } from "react-notifications";
+import { getHomepage } from "../../redux/actions/HomePage";
 
 function Navbar(props) {
   const dispatch = useDispatch();
-  const { categories } = useSelector((state) => state.courses);
+  const { homePage } = useSelector((state) => state.homePage);
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -30,7 +29,7 @@ function Navbar(props) {
 
   useEffect(() => {
     props.isAuthentificated && props.getUserProfile();
-    dispatch(getCategory());
+    dispatch(getHomepage());
   }, []);
 
   const handleChange = (e) => {
@@ -75,8 +74,8 @@ function Navbar(props) {
                 </span>
               </DropdownToggle>
               <DropdownMenu className="sidebar-dropdown-menu-item">
-                {categories !== null &&
-                  categories
+                {homePage !== null && homePage.category !== null &&
+                  homePage.category
                     .filter((item) => item.categories.length < 12)
                     .map((item) => (
                       <DropdownItem
@@ -189,6 +188,7 @@ function Navbar(props) {
           </li>
         </ul>
       </div>
+      <NotificationContainer />
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link,  useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Spinner } from "reactstrap";
+import { NotificationContainer } from "react-notifications";
 
 import imgEdit from "../../../assets/editicon.png";
 import imgDropdown from "../../../assets/dropdownsymbol.png";
@@ -139,6 +140,7 @@ function CreatedQuestions() {
           </>
         )}
       </div>
+      <NotificationContainer />
     </div>
   );
 }

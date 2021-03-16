@@ -6,6 +6,7 @@ import { Col, Row } from "reactstrap";
 import ContentCards from "../../components/ContentCard/Cards";
 import { getCourses } from "../../redux/actions/CoursesAction";
 import defaultImg from "../../assets/defaultLektur.png";
+import { NotificationContainer } from "react-notifications";
 
 function OtherCategory() {
   const dispatch = useDispatch();
@@ -29,36 +30,36 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter((item) => item.categoryId.categories === "Data Science")
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter((item) => item.categoryId.categories === "Data Science")
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
@@ -73,38 +74,38 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter(
-                  (item) => item.categoryId.categories === "Food and Beverage"
-                )
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter(
+                (item) => item.categoryId.categories === "Food and Beverage"
+              )
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
@@ -119,38 +120,38 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter(
-                  (item) => item.categoryId.categories === "Human Resources"
-                )
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter(
+                (item) => item.categoryId.categories === "Human Resources"
+              )
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
@@ -165,39 +166,39 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter(
-                  (item) =>
-                    item.categoryId.categories === "Media and Journalism"
-                )
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter(
+                (item) =>
+                  item.categoryId.categories === "Media and Journalism"
+              )
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
@@ -212,39 +213,39 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter(
-                  (item) =>
-                    item.categoryId.categories === "Network and Security"
-                )
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter(
+                (item) =>
+                  item.categoryId.categories === "Network and Security"
+              )
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
@@ -259,36 +260,36 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter((item) => item.categoryId.categories === "Pharmacology")
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter((item) => item.categoryId.categories === "Pharmacology")
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
@@ -303,38 +304,38 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter(
-                  (item) => item.categoryId.categories === "Sales and Marketing"
-                )
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter(
+                (item) => item.categoryId.categories === "Sales and Marketing"
+              )
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
@@ -349,39 +350,39 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter(
-                  (item) =>
-                    item.categoryId.categories === "Science & Engineering"
-                )
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter(
+                (item) =>
+                  item.categoryId.categories === "Science & Engineering"
+              )
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
@@ -396,38 +397,38 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter(
-                  (item) => item.categoryId.categories === "Social Science"
-                )
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter(
+                (item) => item.categoryId.categories === "Social Science"
+              )
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
@@ -442,44 +443,45 @@ function OtherCategory() {
         <Row className="content-card-container">
           {courses.length !== 0
             ? courses
-                .filter((item) => item.categoryId)
-                .filter(
-                  (item) =>
-                    item.categoryId.categories === "Software Engineering"
-                )
-                .map((item) => (
-                  <Col
-                    xl="3"
-                    md="6"
-                    sm="12"
-                    key={item._id}
-                    className="card-container"
+              .filter((item) => item.categoryId)
+              .filter(
+                (item) =>
+                  item.categoryId.categories === "Software Engineering"
+              )
+              .map((item) => (
+                <Col
+                  xl="3"
+                  md="6"
+                  sm="12"
+                  key={item._id}
+                  className="card-container"
+                >
+                  <Link
+                    to={`/course-detail/${item._id}`}
+                    style={{ textDecoration: "none", color: "black" }}
                   >
-                    <Link
-                      to={`/course-detail/${item._id}`}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      <ContentCards
-                        image={item.image === null ? defaultImg : item.image}
-                        text={item.overview}
-                        title={item.title}
-                        lecture={item.teacherId.fullname}
-                        video_numbers={item.totalVideo}
-                        material_numbers={item.totalMaterial}
-                        footer={
-                          item.categoryId
-                            ? item.categoryId.categories
-                            : "General Science"
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))
+                    <ContentCards
+                      image={item.image === null ? defaultImg : item.image}
+                      text={item.overview}
+                      title={item.title}
+                      lecture={item.teacherId.fullname}
+                      video_numbers={item.totalVideo}
+                      material_numbers={item.totalMaterial}
+                      footer={
+                        item.categoryId
+                          ? item.categoryId.categories
+                          : "General Science"
+                      }
+                    />
+                  </Link>
+                </Col>
+              ))
             : ""}
         </Row>
       </>
       {/* <br />
       <br /> */}
+      <NotificationContainer />
     </div>
   );
 }

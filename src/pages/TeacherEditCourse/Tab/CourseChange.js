@@ -8,13 +8,14 @@ import {
   deleteCourse,
 } from "../../../redux/actions/CoursesAction";
 import CreateContent from "../../../components/CreateContent";
+import { NotificationContainer } from "react-notifications";
 
 const TeacherCourseUpdate = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const { courseDetail, update, detailTitle, detailOverview, isLoading, image} = useSelector(
+  const { courseDetail, update, detailTitle, detailOverview, isLoading, image } = useSelector(
     (state) => state.courses
   );
 
@@ -143,24 +144,24 @@ const TeacherCourseUpdate = () => {
               </p>
               <p>
                 {!isAdd2 ? (
-                    <button onClick={submitImage}>Add header image</button>
-                  ) : (
-                    <>
-                      {image === true ? (
-                          <button>Image Saved</button>
-                      ) : (
-                        
-                        <div className="loading-dot">
-                          <div>
-                            <div className="dot-pulse"></div>
-                            <div className="upload">uploading</div>
-                          </div>
-                          <div onClick={cancelImage} className="cancel">Cancel</div>
-                        </div>  
-                       
-                      )}
-                    </>
-                  )}
+                  <button onClick={submitImage}>Add header image</button>
+                ) : (
+                  <>
+                    {image === true ? (
+                      <button>Image Saved</button>
+                    ) : (
+
+                      <div className="loading-dot">
+                        <div>
+                          <div className="dot-pulse"></div>
+                          <div className="upload">uploading</div>
+                        </div>
+                        <div onClick={cancelImage} className="cancel">Cancel</div>
+                      </div>
+
+                    )}
+                  </>
+                )}
               </p>
 
               <p>Max. size 5 MB. Supported format .png/jpg/jpeg</p>
@@ -169,17 +170,17 @@ const TeacherCourseUpdate = () => {
             </div>
             <div className="teacher-save-new-course">
               <p>
-               {!isAdd3 ? (
-                    <button onClick={submitUpdate}>Save</button>
-                  ) : (
-                    <>
-                      {update !== true ? (
-                        <div id="small-loader-navbar"></div>
-                      ) : (
-                        <button>Saved</button>
-                      )}
-                    </>
-                  )}
+                {!isAdd3 ? (
+                  <button onClick={submitUpdate}>Save</button>
+                ) : (
+                  <>
+                    {update !== true ? (
+                      <div id="small-loader-navbar"></div>
+                    ) : (
+                      <button>Saved</button>
+                    )}
+                  </>
+                )}
               </p>
             </div>
             <p>
@@ -190,7 +191,7 @@ const TeacherCourseUpdate = () => {
             </div>
             <CreateContent />
             {contentList}
-            <div className="teacher-add-new-lesson-button"> 
+            <div className="teacher-add-new-lesson-button">
               <p onClick={addCOntent}>Add new lesson</p>
             </div>
             <div className="publish-and-delete-course">
@@ -206,6 +207,7 @@ const TeacherCourseUpdate = () => {
           </div>
         </div>
       )}
+      <NotificationContainer />
     </>
   );
 };

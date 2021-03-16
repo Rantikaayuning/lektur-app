@@ -9,6 +9,7 @@ import {
   getCourseDetail,
   getTeacherCourses,
 } from "../../../redux/actions/CoursesAction";
+import { NotificationContainer } from "react-notifications";
 
 function CourseFilled(props) {
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ function CourseFilled(props) {
     dispatch(deleteCourse(id))
       .then(() => dispatch(getTeacherCourses))
       .then(() => history.push("/teacher-dashboard"))
-      // .then(() => window.location.reload(false));
+    // .then(() => window.location.reload(false));
   };
 
   // console.log(courseDetail);
@@ -132,7 +133,7 @@ function CourseFilled(props) {
                 Delete Course
               </u>
             </div>
-            <Modal isOpen={modal} toggle={toggle} className={className}>
+            <Modal isOpen={modal} toggle={toggle} className={className} backdropClassName='backdrop-content'>
               <ModalBody>
                 Are you sure you want to delete this course?
               </ModalBody>
@@ -151,6 +152,7 @@ function CourseFilled(props) {
           </div>
         </>
       )}
+      <NotificationContainer />
     </>
   );
 }

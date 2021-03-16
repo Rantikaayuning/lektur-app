@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import "./styles.css";
+import "react-notifications/lib/notifications.css";
 
 import Header from "./components/Header/Navbar";
 import Footer from "./components/Footer";

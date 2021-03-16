@@ -1,4 +1,5 @@
-import {API} from "../../api/index";
+import { NotificationManager } from "react-notifications";
+import { API } from "../../api/index";
 import {
   GET_PROFILE_TEACHER,
   GET_STUDENTS_LIST,
@@ -48,14 +49,13 @@ export const getTeacherCourses = (access_token = null) => (dispatch) => {
         dispatch(fetchLoading(isLoading));
       }
     })
-    .catch(() => {
-      console.log("error");
-      let isLoading = false;
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000); let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
 };
 
-export const getStudentList = (courseId )=> dispatch => {
+export const getStudentList = (courseId) => dispatch => {
   let isLoading = true;
   dispatch(fetchLoading(isLoading));
   axios.get(`${API}/teacher/courses/student?courseId=${courseId}`, {
@@ -72,8 +72,8 @@ export const getStudentList = (courseId )=> dispatch => {
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     })
-    .catch(error => {
-      console.log("Error", error)
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -93,10 +93,10 @@ export const postStudentInvite = (courseId, body) => dispatch => {
         type: POST_STUDENT_INVITE,
         payload: response.data.message,
       });
-      alert(`${response.data.message}`);
+      NotificationManager.success("", `${response.data.message}`, 3000);
     })
-    .catch(error => {
-      console.log("error", error)
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
     });
 };
 export const putStudentApprove = (courseId, studentId) => dispatch => {
@@ -118,8 +118,8 @@ export const putStudentApprove = (courseId, studentId) => dispatch => {
       let isAcceptLoading = false;
       dispatch(fetchAcceptLoading(isAcceptLoading));
     })
-    .catch(error => {
-      console.log("error", error)
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
       let isAcceptLoading = false;
       dispatch(fetchAcceptLoading(isAcceptLoading));
     });
@@ -141,5 +141,5 @@ export const getSearchStudent = (courseId, body) => dispatch => {
         payload: response.data.result,
       });
     })
-    .catch(error => console.log("error", error));
+    .catch((payload) => NotificationManager.error("", payload.response.data.message, 3000));
 };

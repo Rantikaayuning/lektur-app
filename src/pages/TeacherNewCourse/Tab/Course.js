@@ -10,6 +10,7 @@ import {
   getTeacherCourses,
   getCategory,
 } from "../../../redux/actions/CoursesAction";
+import { NotificationContainer } from "react-notifications";
 
 const TeacherCourseTab = (props) => {
   const history = useHistory();
@@ -127,9 +128,9 @@ const TeacherCourseTab = (props) => {
                   <select className="select-category" onChange={(e) => setCategory(e.target.value)}>
                     <option className="option-category" selected>Choose a category*</option>
                     {categories.map((item, index) => (
-                    <option value={item._id}>{item.categories}</option>
-                  ))}
-                </select>
+                      <option value={item._id}>{item.categories}</option>
+                    ))}
+                  </select>
                 )}
               </div>
               <div className="teacher-save-new-course">
@@ -141,7 +142,7 @@ const TeacherCourseTab = (props) => {
                       {getTitle === null ? (
                         <div id="small-loader-navbar"></div>
                       ) : (
-                       <div></div>
+                        <div></div>
                       )}
                     </>
                   )}
@@ -190,7 +191,7 @@ const TeacherCourseTab = (props) => {
                   Delete Course
                 </p>
               </div>
-              <Modal isOpen={modal} toggle={toggle} className={className}>
+              <Modal isOpen={modal} toggle={toggle} className={className} backdropClassName='backdrop-content'>
                 <ModalBody>
                   Are you sure you want to delete this course?
                 </ModalBody>
@@ -210,6 +211,7 @@ const TeacherCourseTab = (props) => {
           )}
         </div>
       </div>
+      <NotificationContainer />
     </>
   );
 };

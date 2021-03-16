@@ -30,7 +30,7 @@
 
 .pop-up-material-box {
   width: 100%;
-  margin: 60px;
+  margin: 40px;
 }
 .pop-up-material-header {
   padding-right: 5%;
@@ -46,13 +46,13 @@
 }
 
 .backdrop-content {
-  zoom: 130%;
+  zoom: 200%;
 }
 
 @media screen and (max-width: 1024px) {
-  .pop-up-course-box{
-    width: 80%;
-  }
+  /* .pop-up-course-box{
+    width: 100%;
+  } */
   .pop-up-course-header{
     width: 100%;
     padding-right: 25%;
@@ -65,12 +65,12 @@
   .lock-content p{
     font-size: 12px;
   }
-  .pop-up-material-box{
-    width: 80%;
-  }
+  /* .pop-up-material-box{
+    width: 100%;
+  } */
   .pop-up-material-header{
     width: 100%;
-    padding-right: 25%;
+    /* padding-right: 25%; */
   }
   #modal-course {
     font-size: 16px;
@@ -83,6 +83,7 @@
   .pop-up-course-material {
     width: 100%;
     font-size: 13px;
+    padding: 50px 50px 50px 80px;
   }
   .pop-up-course-nothing {
     padding: 100px 30%;
@@ -92,15 +93,51 @@
 
 @media screen and (max-width: 768px) {
   .pop-up-material-header{
-    width: 100%;
+    width: 80%;
     padding-right: 10%;
   }
   .pop-up-course-header {
-    width: 100%;
+    width: 80%;
     padding-right: 10%;
+  }
+  .pop-up-course-material {
+    width: 80%;
+    padding: 50px 50px 50px 80px;
   }
   .pop-up-course-nothing {
     padding: 100px 30%;
     display: block;
+  }
+  .pop-up-material-box {
+    width: 80%;
+    /* margin-left: 15%; */
+  }
+  .pop-up-course-box {
+    width: 80%;
+    /* margin-left: 15%; */
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .pop-up-material-header{
+    padding-right: 30%;
+  }
+  .pop-up-course-header {
+    padding-right: 30%;
+  }
+  .pop-up-course-material {
+    width: 50%;
+  }
+  .pop-up-course-nothing {
+    padding: 100px 30%;
+    display: block;
+  }
+  .pop-up-material-box {
+    width: 80%;
+    /* margin: 15%; */
+    margin: 20px;
+  }
+  .pop-up-course-box {
+    width: 80%;
   }
 }

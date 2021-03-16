@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { getCourses, getCategoryById } from "../../redux/actions/CoursesAction";
 import { getHomepage } from "../../redux/actions/HomePage";
 import defaultImg from "../../assets/defaultLektur.png";
+import { NotificationContainer } from "react-notifications";
 
 function Content() {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ function Content() {
     dispatch(getCategoryById(id));
   };
 
-  // console.log(homePage);
+  console.log(homePage);
   // console.log(categoryById);
   return (
     <>
@@ -128,6 +129,7 @@ function Content() {
           </div>
         </div>
       )}
+      <NotificationContainer />
     </>
   );
 }

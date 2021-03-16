@@ -1,3 +1,4 @@
+import { NotificationManager } from "react-notifications";
 import { GET_HOMEPAGE, FETCH_LOADING } from "../types/HomePage";
 import Axios from "axios";
 
@@ -24,8 +25,8 @@ export const getHomepage = () => (dispatch) => {
         dispatch(fetchLoading(isHomeLoading))
       }
     })
-    .catch((error) => {
-      console.log(error)
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
       let isHomeLoading = false;
       dispatch(fetchLoading(isHomeLoading))
     });

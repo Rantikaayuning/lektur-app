@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getQuestions } from "../../redux/actions/AssessmentAction";
 import { useParams, Link } from "react-router-dom";
 import { getCourseDetail } from "../../redux/actions/CoursesAction";
+import { NotificationContainer } from "react-notifications";
 
 const StudentAssessmentResult = () => {
   const dispatch = useDispatch();
@@ -53,8 +54,8 @@ const StudentAssessmentResult = () => {
                     {courseDetail.course.title}
                   </span>
                 </Link>{" "}
-                / <span className="bread-crumb">Final Assessment</span>
-                <span className="link">Result</span>
+                / <span className="bread-crumb">Final Assessment </span>
+                / <span className="link">Result</span>
               </div>
             )}
             <div className="final-assessment-title">
@@ -125,6 +126,7 @@ const StudentAssessmentResult = () => {
           </div>
         </div>
       )}
+      <NotificationContainer />
     </>
   );
 };

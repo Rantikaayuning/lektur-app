@@ -1,4 +1,6 @@
-import {API} from "../../api/index";
+import { NotificationManager } from "react-notifications";
+
+import { API } from "../../api/index";
 import {
   GET_QUESTIONS,
   POST_QUESTIONS,
@@ -21,11 +23,12 @@ export const fetchLoading = (payload) => {
 export const getQuestions = (id) => (dispatch) => {
   let isLoading = true;
   dispatch(fetchLoading(isLoading));
-  axios.get(`${API}/assessment/?courseId=${id}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  })
+  axios
+    .get(`${API}/assessment/?courseId=${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     .then((response) => {
       if (response.status === 200) {
         dispatch({
@@ -36,67 +39,75 @@ export const getQuestions = (id) => (dispatch) => {
         dispatch(fetchLoading(isLoading));
       }
     })
-    .catch((err) => {
-      alert(err);
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
 };
 
 export const postAssessment = (body, id) => async (dispatch) => {
-  axios.post(`${API}/assessment/create?courseId=${id}`, JSON.stringify(body), {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-type": "application/json",
-    },
-  })
+  axios
+    .post(`${API}/assessment/create?courseId=${id}`, JSON.stringify(body), {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-type": "application/json",
+      },
+    })
     .then((response) => {
       if (response.status === 201) {
-        // console.log(body);
+        console.log(response.data);
         dispatch({
           type: POST_QUESTIONS,
           payload: response.data.result,
         });
-        alert("question created successfully");
+        // alert("question created successfully");
+        NotificationManager.success("", `question created`, 3000);
       }
     })
-    .catch((payload) => console.log(payload.response.data.message));
+  // .catch((payload) =>
+  //   console.log(payload.response.data.message)
+  // );
 };
 
 export const deleteQuestion = (courseId, questionId) => () => {
   return new Promise((resolve) => {
-    axios.delete(
-      `${API}/assessment/delete?courseId=${courseId}&questionId=${questionId}`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    )
+    axios
+      .delete(
+        `${API}/assessment/delete?courseId=${courseId}&questionId=${questionId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
       .then((response) => {
         if (response.status === 200) {
           resolve(response.data);
         }
-        alert("question deleted");
+        NotificationManager.success("", `question deleted`, 3000);
       })
-      .catch((err) => alert("error delete question", err));
+      .catch((err) =>
+        NotificationManager.success("", `error delete question, ${err}`, 3000)
+      );
   });
 };
 
 export const putFinalScore = (score, id) => (dispatch) => {
   let isLoading = true;
   dispatch(fetchLoading(isLoading));
-  axios.put(
-    `${API}/assessment/result?courseId=${id}`,
-    {
-      score,
-    },
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
+  axios
+    .put(
+      `${API}/assessment/result?courseId=${id}`,
+      {
+        score,
       },
-    }
-  )
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
     .then((response) => {
       // console.log("score", score);
       dispatch({
@@ -107,23 +118,24 @@ export const putFinalScore = (score, id) => (dispatch) => {
       dispatch(fetchLoading(isLoading));
     })
     .catch((payload) => {
-      alert(payload.response.data.message);
+      NotificationManager.error("", payload.response.data.message, 3000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
 };
 
 export const updateQuestion = (body, id, questionId) => async (dispatch) => {
-  axios.put(
-    `${API}/assessment/update?courseId=${id}&questionId=${questionId}`,
-    JSON.stringify(body),
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-type": "application/json",
-      },
-    }
-  )
+  axios
+    .put(
+      `${API}/assessment/update?courseId=${id}&questionId=${questionId}`,
+      JSON.stringify(body),
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-type": "application/json",
+        },
+      }
+    )
     .then((response) => {
       if (response.status === 200) {
         // console.log(body);
@@ -132,9 +144,11 @@ export const updateQuestion = (body, id, questionId) => async (dispatch) => {
           type: UPDATE_QUESTION,
           payload: response.data,
         });
-        alert("question updated");
+        NotificationManager.success("", `question updated`, 3000);
+        // window.location.reload()
       }
     })
-    .catch((payload) => alert(payload.response.data.message));
+    .catch((payload) =>
+      NotificationManager.error("", payload.response.data.message, 3000)
+    );
 };
-

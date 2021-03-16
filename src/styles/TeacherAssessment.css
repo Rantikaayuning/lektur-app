@@ -19,6 +19,10 @@
   color: black;
 }
 
+.teacher-dashboard-list .tab-locked {
+  color: grey;
+}
+
 .teacher-dashboard-list .open {
   font-weight: bold;
 }

@@ -19,6 +19,7 @@ import {
   putStudentApprove,
   getSearchStudent,
 } from "../../../redux/actions/TeacherAction";
+import { NotificationContainer } from "react-notifications";
 
 const TeacherStudentsUpdate = () => {
   const [dropdownFilterOpen, setDropdownFilterOpen] = useState(false);
@@ -255,64 +256,64 @@ const TeacherStudentsUpdate = () => {
 
               {isSearch
                 ? searchStudents &&
-                  searchStudents.map(item => (
-                    <div className="student-list-name">
-                      <div>
+                searchStudents.map(item => (
+                  <div className="student-list-name">
+                    <div>
+                      <p>
+                        <b>{item.fullname[0]}</b>
+                      </p>
+                      {item.status === 1 ? (
                         <p>
-                          <b>{item.fullname[0]}</b>
+                          <img src={checklistTwo} alt="active" /> Active
                         </p>
-                        {item.status === 1 ? (
-                          <p>
-                            <img src={checklistTwo} alt="active" /> Active
-                          </p>
-                        ) : item.status === 2 ? (
-                          <p>
-                            <img src={checklistThree} alt="completed" />{" "}
+                      ) : item.status === 2 ? (
+                        <p>
+                          <img src={checklistThree} alt="completed" />{" "}
                             Completed
-                          </p>
-                        ) : (
-                          <p>
-                            <img src={checklistOne} alt="pending" /> Pending
-                          </p>
-                        )}
-                      </div>
-                      <div className="course-status">
-                        {item.status === 1 ? (
-                          <div className="course-active">
-                            <p>
-                              <Progress
-                                color="warning"
-                                value={
-                                  (item.totalSeenCourses / item.totalcourse) *
-                                  100
-                                }
-                              />
-                            </p>
-                            <p>
-                              {`${item.totalSeenCourses}/${item.totalcourse} Course Complete`}
-                            </p>
-                          </div>
-                        ) : item.status === 2 ? (
-                          <div className="course-completed">
-                            <h3>{item.score}%</h3>
-                            <p>Assessment Score</p>
-                          </div>
-                        ) : (
-                          <div className="course-pending">
-                            <p>
-                              <button
-                                onClick={() => handleAccept(item.studentId._id)}
-                              >
-                                Accept
-                              </button>
-                            </p>
-                          </div>
-                        )}
-                      </div>
+                        </p>
+                      ) : (
+                        <p>
+                          <img src={checklistOne} alt="pending" /> Pending
+                        </p>
+                      )}
                     </div>
-                  ))
+                    <div className="course-status">
+                      {item.status === 1 ? (
+                        <div className="course-active">
+                          <p>
+                            <Progress
+                              color="warning"
+                              value={
+                                (item.totalSeenCourses / item.totalcourse) *
+                                100
+                              }
+                            />
+                          </p>
+                          <p>
+                            {`${item.totalSeenCourses}/${item.totalcourse} Course Complete`}
+                          </p>
+                        </div>
+                      ) : item.status === 2 ? (
+                        <div className="course-completed">
+                          <h3>{item.score}%</h3>
+                          <p>Assessment Score</p>
+                        </div>
+                      ) : (
+                        <div className="course-pending">
+                          <p>
+                            <button
+                              onClick={() => handleAccept(item.studentId._id)}
+                            >
+                              Accept
+                              </button>
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))
                 : filter.length === 0 && isFilter === false
-                ? studentsList.map(item => (
+                  ? studentsList.map(item => (
                     <div className="student-list-name">
                       <div>
                         <p>
@@ -368,7 +369,7 @@ const TeacherStudentsUpdate = () => {
                       </div>
                     </div>
                   ))
-                : filter.map(item => (
+                  : filter.map(item => (
                     <div className="student-list-name">
                       <div>
                         <p>
@@ -428,6 +429,7 @@ const TeacherStudentsUpdate = () => {
           </div>
         </div>
       )}
+      <NotificationContainer />
     </>
   );
 };

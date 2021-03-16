@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { postAssessment } from "../../redux/actions/AssessmentAction";
 import { produce } from "immer";
-
 import { useDispatch } from "react-redux";
+import { NotificationManager, NotificationContainer } from "react-notifications";
+// import "react-notifications/lib/notifications.css";
 
 function CreateAssessment() {
   const { id } = useParams();
@@ -34,6 +35,9 @@ function CreateAssessment() {
   };
 
   const handleSubmit = (e) => {
+    // if (messageAlert !== null && messageAlert.code === 201) {
+    //   NotificationManager.success("", messageAlert.message, 3000); // `${messageAlert}`
+    // }
     e.preventDefault();
     const body = {
       number: question.number,
@@ -43,7 +47,6 @@ function CreateAssessment() {
       options: options,
     };
     dispatch(postAssessment(body, id));
-    // console.log(body);
   };
 
   // console.log(JSON.stringify(options, null, 2));
@@ -170,16 +173,12 @@ function CreateAssessment() {
                 className="save-per-question"
                 onClick={() =>
                   !question.number
-                    ? alert("Please fill in the number")
+                    ? NotificationManager.error("", `Please fill in the number`, 3000)
                     : !question.question
-                    ? alert("Please fill in the question")
-                    : !answer
-                    ? alert(
-                        "Please fill in the options and select the correct answer"
-                      )
-                    : // : !question.remarks
-                      // ? alert("Please fill in the remarks")
-                      setButtonText("Question Saved")
+                      ? NotificationManager.error("", `Please fill in the question`, 3000)
+                      : !answer
+                        ? NotificationManager.error("", `Please fill in the options and select the correct answer`, 3000)
+                        : setButtonText("Question Saved")
                 }
               >
                 <button type="submit" onClick={handleSubmit}>
@@ -190,6 +189,7 @@ function CreateAssessment() {
           </form>
         </>
       </div>
+      <NotificationContainer />
     </>
   );
 }

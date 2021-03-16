@@ -4,11 +4,10 @@ import { Link, useParams } from "react-router-dom";
 import { Row, Col } from "reactstrap";
 
 import ContentCards from "../../components/ContentCard/Cards";
-import {
-  getCategory,
-  getCategoryById,
-} from "../../redux/actions/CoursesAction";
+import { getCategoryById } from "../../redux/actions/CoursesAction";
 import defaultImg from "../../assets/defaultLektur.png";
+import { NotificationContainer } from "react-notifications";
+// import { getHomepage } from "../../redux/actions/HomePage";
 
 function CategorySelection() {
   const dispatch = useDispatch();
@@ -18,7 +17,7 @@ function CategorySelection() {
 
   useEffect(() => {
     dispatch(getCategoryById(id));
-    dispatch(getCategory());
+    // dispatch(getHomepage());
   }, [dispatch, id]);
 
   // console.log(categories);
@@ -42,35 +41,36 @@ function CategorySelection() {
       <Row className="content-card-container">
         {categoryById.length !== 0
           ? categoryById.map((item) => (
-              <Col
-                xl="3"
-                md="6"
-                sm="12"
-                key={item._id}
-                className="card-container"
+            <Col
+              xl="3"
+              md="6"
+              sm="12"
+              key={item._id}
+              className="card-container"
+            >
+              <Link
+                to={`/course-detail/${item._id}`}
+                style={{ textDecoration: "none", color: "black" }}
               >
-                <Link
-                  to={`/course-detail/${item._id}`}
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  <ContentCards
-                    image={item.image === null ? defaultImg : item.image}
-                    text={item.overview}
-                    title={item.title}
-                    lecture={item.teacherId.fullname}
-                    video_numbers={item.totalVideo}
-                    material_numbers={item.totalMaterial}
-                    footer={
-                      item.categoryId
-                        ? item.categoryId.categories
-                        : "General Science"
-                    }
-                  />
-                </Link>
-              </Col>
-            ))
+                <ContentCards
+                  image={item.image === null ? defaultImg : item.image}
+                  text={item.overview}
+                  title={item.title}
+                  lecture={item.teacherId.fullname}
+                  video_numbers={item.totalVideo}
+                  material_numbers={item.totalMaterial}
+                  footer={
+                    item.categoryId
+                      ? item.categoryId.categories
+                      : "General Science"
+                  }
+                />
+              </Link>
+            </Col>
+          ))
           : ""}
       </Row>
+      <NotificationContainer />
     </div>
   );
 }

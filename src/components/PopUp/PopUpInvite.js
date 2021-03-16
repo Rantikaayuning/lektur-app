@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../redux/actions/UserAction";
 import { postStudentInvite } from "../../redux/actions/TeacherAction";
 import { useParams } from "react-router-dom";
+import { NotificationContainer } from "react-notifications";
 
 export const PopUpInvite = props => {
   const { id } = useParams();
@@ -29,7 +30,7 @@ export const PopUpInvite = props => {
   function handleDelete(id) {
     setStudentList(studentList.filter((student, index) => index !== id));
   }
-  
+
   const handleInvite = () => {
     dispatch(postStudentInvite(id, studentList));
     // setShowInviteModal(false);
@@ -92,6 +93,7 @@ export const PopUpInvite = props => {
           </div>
         </Modal.Body>
       </Modal>
+      <NotificationContainer />
     </>
   );
 };

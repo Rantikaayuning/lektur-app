@@ -7,6 +7,7 @@ import { getCourseDetail, getCourses, postEnrollCourse, getStudentCourses } from
 
 import ContentCards from "../../components/ContentCard/Cards";
 import defaultImg from "../../assets/defaultLektur.png";
+import { NotificationContainer } from "react-notifications";
 
 function CourseDetail() {
   const [PopUpCourseDetail, setPopUpCourseDetail] = useState(false);
@@ -14,8 +15,8 @@ function CourseDetail() {
   const { id } = useParams();
   const dispatch = useDispatch();
 
-  const {courseDetail, courses, studentCourses} = useSelector(state => state.courses);
-  const {userProfile, isAuthentificated} = useSelector(state => state.users);
+  const { courseDetail, courses, studentCourses } = useSelector(state => state.courses);
+  const { userProfile, isAuthentificated } = useSelector(state => state.users);
 
   useEffect(() => {
     dispatch(getCourseDetail(id));
@@ -48,15 +49,15 @@ function CourseDetail() {
                 <div>
                   {userProfile.status === 0 ? (
                     <>
-                    {find === null || find === undefined ? (
-                      <button onClick={handleEnroll} className='not-enrolled'>
-                        Enroll Now
-                      </button>
-                    ) : (
-                      <button className='enrolled'>
-                        You've already enrolled
-                      </button>
-                    )}
+                      {find === null || find === undefined ? (
+                        <button onClick={handleEnroll} className='not-enrolled'>
+                          Enroll Now
+                        </button>
+                      ) : (
+                        <button className='enrolled'>
+                          You've already enrolled
+                        </button>
+                      )}
                     </>
                   ) : null}
                 </div>
@@ -75,14 +76,14 @@ function CourseDetail() {
                 <p className="p1">{courseDetail.course.totalMaterial}</p>
                 <p className="p2">Study Material</p>
               </div>
-              <div className="course-detail-right-material">
-                <p>Content</p>
+              <div className="course-detail-right-material overflow-auto">
+                <div className="content-p">Content</div>
                 <ul>
                   <li>
                     {courseDetail.content.map((item, index) => (
-                    <div className="rectangle">
-                      <p>Lesson #{index + 1}: {item.title}</p>
-                    </div>
+                      <div className="rectangle">
+                        <p>Lesson #{index + 1}: {item.title}</p>
+                      </div>
                     ))}
                   </li>
                 </ul>
@@ -124,6 +125,7 @@ function CourseDetail() {
           </div>
           <Modal
             show={PopUpCourseDetail}
+            backdropClassName='backdrop-content'
             size="lg"
             onHide={() => setPopUpCourseDetail(false)}
             dialogClassName="modal-90w"
@@ -134,7 +136,7 @@ function CourseDetail() {
                 <Modal.Header closeButton>
                   <div className="modal-central" closeButton>
                     <div className='image-content-box'>
-                      <img src={defaultImg} alt='default' className="modal-central-image"/>
+                      <img src={defaultImg} alt='default' className="modal-central-image" />
                     </div>
                     <div className="modal-central-content">
                       <p className="p1">Successfully enrolled!</p>
@@ -162,6 +164,7 @@ function CourseDetail() {
           </Modal>
         </>
       )}
+      <NotificationContainer />
     </div>
   );
 }

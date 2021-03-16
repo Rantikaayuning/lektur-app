@@ -1,4 +1,6 @@
-import {API} from "../../api/index";
+import { NotificationManager } from "react-notifications";
+
+import { API } from "../../api/index";
 import {
   GET_ALL_COURSES,
   GET_COURSE_DETAIL,
@@ -45,8 +47,9 @@ export const getCourses = (payload) => (dispatch) => {
         });
       }
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
+
     });
 };
 
@@ -67,8 +70,8 @@ export const getCourseDetail = (id) => (dispatch) => {
         dispatch(fetchLoading(isLoading));
       }
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -89,8 +92,8 @@ export const postEnrollCourse = (id) => (dispatch) => {
         });
       }
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      console.log(payload.response.data.message);
     });
 };
 
@@ -108,16 +111,16 @@ export const getStudentCourses = (payload) => (dispatch) => {
   )
     .then((response) => {
       // if (response.status === 200) {
-        dispatch({
-          type: GET_COURSE_STUDENT,
-          payload: response.data.result,
-        });
-        let isLoading = false;
-        dispatch(fetchLoading(isLoading));
+      dispatch({
+        type: GET_COURSE_STUDENT,
+        payload: response.data.result,
+      });
+      let isLoading = false;
+      dispatch(fetchLoading(isLoading));
       // }
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      console.log(payload.response.data.message);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -136,8 +139,8 @@ export const getStudentEnroll = (id) => (dispatch) => {
         });
       }
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
     });
 };
 
@@ -152,8 +155,8 @@ export const getCourseSearch = (input) => (dispatch) => {
         });
       }
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
     });
 };
 
@@ -174,8 +177,8 @@ export const getTeacherCourses = (access_token = null) => (dispatch) => {
         });
       }
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
     });
 };
 
@@ -195,8 +198,8 @@ export const getPopUpContent = (id) => (dispatch) => {
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -219,8 +222,8 @@ export const getPopUpMaterial = (id) => (dispatch) => {
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -243,8 +246,8 @@ export const getContentDetail = (id) => (dispatch) => {
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -267,8 +270,8 @@ export const updateCourse = (id, title, overview) => (dispatch) => {
         payload: response.data.success,
       });
     })
-    .catch(() => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
     });
 };
 
@@ -294,8 +297,8 @@ export const postCourse = (title, overview, file, categoryId) => (dispatch) => {
         });
       }
     })
-    .catch((error) => {
-      console.log(error)
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
     });
 };
 
@@ -317,7 +320,7 @@ export const getCourseFilled = (id) => (dispatch) => {
         });
       }
     })
-    .catch((error) => console.log(error));
+    .catch((payload) => NotificationManager.error("", payload.response.data.message, 3000));
 };
 
 export const postContent = (id, title, description, number) => (dispatch) => {
@@ -342,7 +345,7 @@ export const postContent = (id, title, description, number) => (dispatch) => {
         idContent: response.data.result._id,
       });
     }
-  });
+  }).catch((payload) => NotificationManager.error("", payload.response.data.message, 3000))
 };
 
 export const uploadMaterial = (idContent, material) => (dispatch) => {
@@ -355,7 +358,7 @@ export const uploadMaterial = (idContent, material) => (dispatch) => {
     `${API}/content/upload/file?contentId=${idContent}`,
     material,
     config,
-   
+
   ).then((response) => {
     if (response.status === 201) {
       dispatch({
@@ -365,7 +368,8 @@ export const uploadMaterial = (idContent, material) => (dispatch) => {
       });
     }
   })
-  .catch((err) => alert("Upload material failed, try again"));
+    .catch(() =>
+      NotificationManager.error("", `failed to upload material, try again!`, 3000))
 };
 
 export const uploadVideo = (idContent, video) => (dispatch) => {
@@ -386,7 +390,8 @@ export const uploadVideo = (idContent, video) => (dispatch) => {
       }
     }
   )
-  .catch((err) => alert("Upload video failed, try again"));
+    .catch(() =>
+      NotificationManager.error("", `failed to upload video, try again!`, 3000))
 };
 
 export const uploadImage = (id, file) => (dispatch) => {
@@ -406,7 +411,8 @@ export const uploadImage = (id, file) => (dispatch) => {
       }
     }
   )
-  .catch((err) => alert("Upload failed, try again"));
+    .catch(() =>
+      NotificationManager.error("", `upload failed, try again!`, 3000))
 };
 
 export const deleteCourse = (id) => () => {
@@ -421,7 +427,7 @@ export const deleteCourse = (id) => () => {
           resolve(response.data);
         }
       })
-      .catch((err) => console.log(err));
+      .catch((payload) => NotificationManager.error("", payload.response.data.message, 3000));
   });
 };
 
@@ -442,8 +448,8 @@ export const getCertificate = (id) => (dispatch) => {
       isLoading = false;
       dispatch(fetchLoading(isLoading));
     })
-    .catch((err) => {
-      console.log("error");
+    .catch((payload) => {
+      NotificationManager.error("", payload.response.data.message, 3000);
       isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -464,7 +470,7 @@ export const getCategory = () => (dispatch) => {
         });
       }
     })
-    .catch((error) => console.log(error));
+    .catch((payload) => console.log(payload.response.data.message)); //
 };
 
 export const getCategoryById = (id) => (dispatch) => {
@@ -483,5 +489,5 @@ export const getCategoryById = (id) => (dispatch) => {
         payload: response.data.course,
       });
     })
-    .catch((error) => alert(error));
+    .catch((payload) => NotificationManager.error("", payload.response.data.message, 3000));
 };
