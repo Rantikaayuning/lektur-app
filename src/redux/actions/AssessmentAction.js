@@ -40,7 +40,7 @@ export const getQuestions = (id) => (dispatch) => {
       }
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -62,7 +62,7 @@ export const postAssessment = (body, id) => async (dispatch) => {
           payload: response.data.result,
         });
         // alert("question created successfully");
-        NotificationManager.success("", `question created`, 3000);
+        NotificationManager.success("", `question created`, 5000);
       }
     })
   // .catch((payload) =>
@@ -85,10 +85,10 @@ export const deleteQuestion = (courseId, questionId) => () => {
         if (response.status === 200) {
           resolve(response.data);
         }
-        NotificationManager.success("", `question deleted`, 3000);
+        NotificationManager.success("", `question deleted`, 5000);
       })
       .catch((err) =>
-        NotificationManager.success("", `error delete question, ${err}`, 3000)
+        NotificationManager.success("", `error delete question, ${err}`, 5000)
       );
   });
 };
@@ -118,7 +118,7 @@ export const putFinalScore = (score, id) => (dispatch) => {
       dispatch(fetchLoading(isLoading));
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -144,11 +144,11 @@ export const updateQuestion = (body, id, questionId) => async (dispatch) => {
           type: UPDATE_QUESTION,
           payload: response.data,
         });
-        NotificationManager.success("", `question updated`, 3000);
+        NotificationManager.success("", `question updated`, 5000);
         // window.location.reload()
       }
     })
     .catch((payload) =>
-      NotificationManager.error("", payload.response.data.message, 3000)
+      NotificationManager.error("", payload.response.data.message, 5000)
     );
 };

@@ -40,7 +40,7 @@ export const postLogin = (body) => async (dispatch) => {
       return response.data.token;
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
       let isUserLoading = false;
       dispatch(fetchLoading(isUserLoading));
     });
@@ -59,11 +59,11 @@ export const postSignup = (role, payload) => async (dispatch) => {
         });
         let isUserLoading = false;
         dispatch(fetchLoading(isUserLoading));
-        NotificationManager.success("", `${response.data.message} please continue to login`, 3000);
+        NotificationManager.success("", `${response.data.message} please continue to login`, 5000);
       }
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
       let isUserLoading = false;
       dispatch(fetchLoading(isUserLoading));
     });
@@ -87,7 +87,7 @@ export const getUserProfile = (access_token = null) => (dispatch) => {
       });
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
     });
 };
 
@@ -123,7 +123,7 @@ export const updateUserProfile = (fullname, email) => async (dispatch) => {
       window.location.reload();
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
       let isUserLoading = false;
       dispatch(fetchLoading(isUserLoading));
     });
@@ -147,6 +147,6 @@ export const updateProfileImage = (file) => async (dispatch) => {
       });
     })
     .catch(() =>
-      NotificationManager.error("", `failed to update, try again!`, 3000)
+      NotificationManager.error("", `failed to update, try again!`, 5000)
     );
 };

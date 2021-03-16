@@ -50,7 +50,7 @@ export const getTeacherCourses = (access_token = null) => (dispatch) => {
       }
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000); let isLoading = false;
+      NotificationManager.error("", payload.response.data.message, 5000); let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
 };
@@ -73,7 +73,7 @@ export const getStudentList = (courseId) => dispatch => {
       dispatch(fetchLoading(isLoading));
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
       let isLoading = false;
       dispatch(fetchLoading(isLoading));
     });
@@ -93,10 +93,10 @@ export const postStudentInvite = (courseId, body) => dispatch => {
         type: POST_STUDENT_INVITE,
         payload: response.data.message,
       });
-      NotificationManager.success("", `${response.data.message}`, 3000);
+      NotificationManager.success("", `${response.data.message}`, 5000);
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
     });
 };
 export const putStudentApprove = (courseId, studentId) => dispatch => {
@@ -119,7 +119,7 @@ export const putStudentApprove = (courseId, studentId) => dispatch => {
       dispatch(fetchAcceptLoading(isAcceptLoading));
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
       let isAcceptLoading = false;
       dispatch(fetchAcceptLoading(isAcceptLoading));
     });
@@ -141,5 +141,5 @@ export const getSearchStudent = (courseId, body) => dispatch => {
         payload: response.data.result,
       });
     })
-    .catch((payload) => NotificationManager.error("", payload.response.data.message, 3000));
+    .catch((payload) => NotificationManager.error("", payload.response.data.message, 5000));
 };

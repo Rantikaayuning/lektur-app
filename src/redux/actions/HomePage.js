@@ -26,7 +26,7 @@ export const getHomepage = () => (dispatch) => {
       }
     })
     .catch((payload) => {
-      NotificationManager.error("", payload.response.data.message, 3000);
+      NotificationManager.error("", payload.response.data.message, 5000);
       let isHomeLoading = false;
       dispatch(fetchLoading(isHomeLoading))
     });
