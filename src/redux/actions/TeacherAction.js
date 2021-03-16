@@ -117,6 +117,7 @@ export const putStudentApprove = (courseId, studentId) => dispatch => {
       });
       let isAcceptLoading = false;
       dispatch(fetchAcceptLoading(isAcceptLoading));
+      window.location.reload()
     })
     .catch((payload) => {
       NotificationManager.error("", payload.response.data.message, 3000);

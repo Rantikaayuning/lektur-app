@@ -41,6 +41,10 @@ export default function CreateContent() {
         );
     };
 
+    const cancelContent = () => {
+        setAdd3(false)
+    }
+
     const cancelVideo = () => {
         setAdd2(false)
     }
@@ -91,7 +95,10 @@ export default function CreateContent() {
                     ) : (
                         <>
                             {idContent === null ? (
+                            <div className="loading-dot">
                                 <div id="small-loader-navbar"></div>
+                                <div onClick={cancelContent} className="cancel">Cancel</div>
+                            </div>
                             ) : (
                                 <button>Saved</button>
                             )}

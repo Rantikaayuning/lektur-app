@@ -15,7 +15,7 @@ const TeacherAssessmentTabEdit = () => {
   const history = useHistory();
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { assessment } = useSelector(
+  const { assessment, isLoading } = useSelector(
     (state) => state.assessment
   );
 
@@ -27,8 +27,13 @@ const TeacherAssessmentTabEdit = () => {
     history.push(`/new-created-questions/${id}`);
   };
 
+  // console.log(assessment)
   return (
-    <div className="teacher-assessment">
+    <>
+    {isLoading ? (
+      <div id='loader'></div>
+    ) : (
+      <div className="teacher-assessment">
       <div className="teacher-dashboard-list">
         <Link to={`/course-teacher/course/${id}`}>
           <p>Course</p>
@@ -110,6 +115,8 @@ const TeacherAssessmentTabEdit = () => {
       </>
       <NotificationContainer />
     </div>
+    )}
+    </>
   );
 };
 

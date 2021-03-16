@@ -1,6 +1,6 @@
 .course-detail {
   width: 100%;
-  height: max-content;
+  height: 400px;
   display: flex;
   justify-content: space-between;
   background-color:rgb(15, 15, 15);

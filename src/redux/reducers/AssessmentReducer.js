@@ -11,7 +11,7 @@ const initialState = {
   addAssessment: null,
   finalScore: null,
   updateCreatedQuestion: null,
-  isAssessmentLoading: false
+  isLoading: false
 };
 
 const assessmentReducer = (state = initialState, action) => {
@@ -40,7 +40,7 @@ const assessmentReducer = (state = initialState, action) => {
     case FETCH_LOADING:
       return {
         ...state,
-        isAssessmentLoading: payload,
+        isLoading: payload,
       };
     default:
       return state;

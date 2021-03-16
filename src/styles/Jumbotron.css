@@ -153,7 +153,7 @@
     }
     .video-content .bottom {
         display: flex;
-        /* flex-direction: column; */
+        flex-direction: column;
     }
     .video-content .buttom .left{
         width: 50%;
@@ -183,5 +183,20 @@
     }
     .video-content .buttom .right{
         width: 50%;
+    }
+    .jumbotron-right .video-content {
+        width: 130%;
+        margin-left: -50px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .jumbotron {
+        display: flex;
+        flex-direction: column;
+    }
+    .jumbotron-right .video-content {
+        width: 150%;
+        margin-left: -50px;
     }
 }

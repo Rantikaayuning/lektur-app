@@ -7,6 +7,7 @@ import {useSelector} from "react-redux"
 
 const Home = () => {
   const { searchCourse } = useSelector(state => state.courses)
+  const { isAuthentificated } = useSelector(state => state.users)
   const { homePage, isHomeLoading } = useSelector((state) => state.homePage);
   
   return (
@@ -37,9 +38,13 @@ const Home = () => {
             <h1>
               Create Your <span className="own-class">Own Class</span>
             </h1>
+            {isAuthentificated ? (
+              <div></div>
+            ) : (
             <Link to="/register">
               <button>Register Now</button>
             </Link>
+            )}
           </div>
         </div>        
     </>

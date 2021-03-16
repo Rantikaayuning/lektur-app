@@ -17,6 +17,7 @@ function CreatedQuestions() {
 
   const dispatch = useDispatch();
   const allQuestions = useSelector((state) => state.assessment.assessment);
+  const {isLoading} = useSelector((state) => state.assessment);
 
   useEffect(() => {
     dispatch(getQuestions(id));
@@ -32,7 +33,11 @@ function CreatedQuestions() {
   // console.log("allQuestions: ", allQuestions);
 
   return (
-    <div className="teacher-assessment">
+    <>
+    {isLoading ? (
+      <div id='loader'></div>
+    ) : (
+      <div className="teacher-assessment">
       <div className="teacher-dashboard-list">
         <Link to={`/course-filled-teacher/${id}`}>
           <p>Course</p>
@@ -142,6 +147,8 @@ function CreatedQuestions() {
       </div>
       <NotificationContainer />
     </div>
+    )}
+    </>
   );
 }
 
