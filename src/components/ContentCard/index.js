@@ -25,7 +25,7 @@ function Content() {
     dispatch(getCategoryById(id));
   };
 
-  console.log(homePage);
+  // console.log(searchCourse);
   // console.log(categoryById);
   return (
     <>
@@ -73,7 +73,7 @@ function Content() {
                     className="card-container"
                   >
                     <Link
-                      to={`/course-detail/${item._id}`}
+                      to={`/course-detail/${item.courseId}`}
                       style={{ textDecoration: "none", color: "black" }}
                     >
                       <ContentCards
@@ -84,7 +84,7 @@ function Content() {
                         video_numbers={item.totalVideo}
                         material_numbers={item.totalMaterial}
                         footer={
-                          item.category
+                          item.category[0]
                             ? item.category
                             : "General Science"
                         }

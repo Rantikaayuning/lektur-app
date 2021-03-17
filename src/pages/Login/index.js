@@ -76,7 +76,7 @@ function Login() {
                 <div className="email-password-field">
                   <input
                     type="password"
-                    placeholder="********"
+                    placeholder="Min. 8 Characters"
                     name="password"
                     className="login-password"
                     onChange={(e) => handleLogin(e)}

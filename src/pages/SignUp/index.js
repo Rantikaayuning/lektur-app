@@ -71,7 +71,7 @@ export default function SignUp(props) {
               <div className="email-password-username-field">
                 <input
                   type="password"
-                  placeholder="******"
+                  placeholder="Min. 8 Characters"
                   name="password"
                   onChange={(e) => handleSignUp(e)}
                 />

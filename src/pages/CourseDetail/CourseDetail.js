@@ -32,7 +32,7 @@ function CourseDetail() {
   const find = studentCourses.course && studentCourses.course.find(item => [item.courseId !== null && item.courseId !== undefined && item.courseId._id].includes(id) )
 
   // console.log("detail", courseDetail)
-  console.log(find)
+  // console.log(find)
 
   return (
     <div className="main-course">
